@@ -1,0 +1,77 @@
+Changelog 1.0.0-1.20.1:
+
+- Added Leather Shield
+- Added Gold Shield
+- Added Diamond Shield
+- Added Netherite Shield
+
+Changelog 1.0.0-1.20.2:
+
+- Ported to 1.20.2
+
+Changelog 1.0.1-1.20.1:
+
+- Changed Icon of Creative Mode Tab
+- Added Amethyst Shield
+- Added Emerald Shield
+- Added End Crystal Shield
+- Added Obsidian Shield
+- Fixed de_de language
+
+Changelog 1.0.2-1.20.1:
+
+- Updated to forge - 47.2.17
+
+Changelog 1.0.3-1.20.1:
+
+- Added Coal Shield (smeltable)
+- Simplified code of End Crystal Shield
+- Added Tool Tips for Shields
+
+Changelog 1.0.4-1.20.1:
+
+- Nerfed Leather Shield (durability 216 --> 196)
+- Nerfed Gold Shield (durability 356 --> 322)
+- Changed recipes (recipe should now work for other mods with the 'plank' tag)
+- Fixed Coal Shield recipe (now compatible with charcoal)
+- Netherite Shield is now fire-resistant
+- Removed Custom Creative Mode Tab
+- Added Items to the Combat Creative Mode Tab
+- Crafting remainder support added to the equipment slot
+- Fixed logo
+- Updated to forge - 47.2.18
+- Added Glass Shield (transparent)
+
+BANNER SUPPORT COMING SOON!
+
+Changelog 1.0.5-1.20.1:
+
+- Added Tinted Glass Shield
+- Updated to forge 47.2.19
+- Finished Config support
+- Changed language files
+
+Changelog 1.0.6-1.20.1:
+
+- Updated to forge 49.2.20
+- Cleaned and sorted the code
+- Tool tips are now your custom durability (Example: Leather Shield. Durability is YOUR_DURABILITY)
+
+Changelog 1.0.7-1.20.1:
+
+- Added language file zh_cn.json (Simplified Chinese)
+- Added Brown Stained Glass Shield
+- Added Blue Stained Glass Shield
+- Added Cyan Stained Glass Shield
+- Added Light Blue Stained Glass Shield
+- Added Green Stained Glass Shield
+- Added Lime Stained Glass Shield
+- Added Yellow Stained Glass Shield
+- Added Pink Stained Glass Shield
+- Added Orange Stained Glass Shield
+- Added Red Stained Glass Shield
+
+Changelog 1.0.8-1.20.1:
+
+- Fixed Config File
+- Fixed Amethyst Shield Recipe (sorry for late fix)
