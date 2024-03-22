@@ -5,6 +5,7 @@ import com.rajhab.morevanillashields_mod.morevanillashields;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
@@ -33,9 +34,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.leather_shield").append(String.valueOf(ShieldConfig.LEATHER_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.leather_shield").append(String.valueOf(ShieldConfig.LEATHER_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -55,9 +56,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.gold_shield").append(String.valueOf(ShieldConfig.GOLD_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.gold_shield").append(String.valueOf(ShieldConfig.GOLD_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -75,9 +76,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.diamond_shield").append(String.valueOf(ShieldConfig.DIAMOND_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.diamond_shield").append(String.valueOf(ShieldConfig.DIAMOND_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -95,9 +96,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.glass_shield").append(String.valueOf(ShieldConfig.GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.glass_shield").append(String.valueOf(ShieldConfig.GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -115,9 +116,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.tinted_glass_shield").append(String.valueOf(ShieldConfig.TINTED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.tinted_glass_shield").append(String.valueOf(ShieldConfig.TINTED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -135,9 +136,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.brown_stained_glass_shield").append(String.valueOf(ShieldConfig.BROWN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.brown_stained_glass_shield").append(String.valueOf(ShieldConfig.BROWN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -155,9 +156,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.blue_stained_glass_shield").append(String.valueOf(ShieldConfig.BLUE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.blue_stained_glass_shield").append(String.valueOf(ShieldConfig.BLUE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -175,9 +176,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.cyan_stained_glass_shield").append(String.valueOf(ShieldConfig.CYAN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.cyan_stained_glass_shield").append(String.valueOf(ShieldConfig.CYAN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -195,9 +196,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.light_blue_stained_glass_shield").append(String.valueOf(ShieldConfig.LIGHT_BLUE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.light_blue_stained_glass_shield").append(String.valueOf(ShieldConfig.LIGHT_BLUE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -215,9 +216,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.green_stained_glass_shield").append(String.valueOf(ShieldConfig.GREEN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.green_stained_glass_shield").append(String.valueOf(ShieldConfig.GREEN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -235,9 +236,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.lime_stained_glass_shield").append(String.valueOf(ShieldConfig.LIME_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.lime_stained_glass_shield").append(String.valueOf(ShieldConfig.LIME_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -255,9 +256,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.yellow_stained_glass_shield").append(String.valueOf(ShieldConfig.YELLOW_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.yellow_stained_glass_shield").append(String.valueOf(ShieldConfig.YELLOW_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -275,9 +276,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.pink_stained_glass_shield").append(String.valueOf(ShieldConfig.PINK_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.pink_stained_glass_shield").append(String.valueOf(ShieldConfig.PINK_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -295,9 +296,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.orange_stained_glass_shield").append(String.valueOf(ShieldConfig.ORANGE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.orange_stained_glass_shield").append(String.valueOf(ShieldConfig.ORANGE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -315,9 +316,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.red_stained_glass_shield").append(String.valueOf(ShieldConfig.RED_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.red_stained_glass_shield").append(String.valueOf(ShieldConfig.RED_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -335,9 +336,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.netherite_shield").append(String.valueOf(ShieldConfig.NETHERITE_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.netherite_shield").append(String.valueOf(ShieldConfig.NETHERITE_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -360,9 +361,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.emerald_shield").append(String.valueOf(ShieldConfig.EMERALD_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.emerald_shield").append(String.valueOf(ShieldConfig.EMERALD_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -380,9 +381,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.amethyst_shield").append(String.valueOf(ShieldConfig.AMETHYST_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.amethyst_shield").append(String.valueOf(ShieldConfig.AMETHYST_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -400,9 +401,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.obsidian_shield").append(String.valueOf(ShieldConfig.OBSIDIAN_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.obsidian_shield").append(String.valueOf(ShieldConfig.OBSIDIAN_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -425,9 +426,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.coal_shield").append(String.valueOf(ShieldConfig.COAL_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.coal_shield").append(String.valueOf(ShieldConfig.COAL_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
@@ -450,9 +451,9 @@ public class ModItems {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     if (Screen.hasShiftDown()) {
-                        components.add(Component.Serializer.fromJson("item.moditems.end_crystal_shield").append(String.valueOf(ShieldConfig.END_CRYSTAL_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        components.add(new TranslatableComponent("item.moditems.end_crystal_shield").append(String.valueOf(ShieldConfig.END_CRYSTAL_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
                     } else {
-                        components.add(Component.Serializer.fromJson("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        components.add(new TranslatableComponent("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                     }
 
                     super.appendHoverText(stack, level, components, flag);
