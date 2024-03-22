@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "wrw",
+    "www",
+    " w "
+  ],
+  "key": {
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "w": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "morevanillashields:redstone_shield"
+  }
+}
