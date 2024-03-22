@@ -7,3 +7,14 @@ Changelog 1.0.1-1.19.2:
 - Fixed Config File
 - Fixed Recipe Book Support
 - Fixed Amethyst Shield Recipe (sorry for late fix)
+
+Changelog 1.0.2-1.19.2:
+
+- Added ParchmentMC Mappings
+- Updated to forge 43.3.9
+- Added Update Checker
+- Added Homepage Button
+- Added Issue Tracker
+- Optimized Config file
+- Added Server Starting Message
+- Changed GitHub Repositorys
