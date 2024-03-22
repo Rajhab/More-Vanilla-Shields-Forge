@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smithing",
+  "category": "equipment",
+  "base": {
+    "item": "morevanillashields:diamond_shield"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "item": "morevanillashields:netherite_shield",
+    "count": 1
+  }
+}
