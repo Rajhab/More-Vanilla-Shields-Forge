@@ -32,17 +32,11 @@ public class morevanillashields
         //ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MoreVanillaShieldsConfig.SPEC, "morevanillashields-common.toml");
         //ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MoreVanillaShieldsConfig.SPEC, "morevanillashields-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
-
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         modEventBus.addListener(this::commonSetup);
-
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
-
         MinecraftForge.EVENT_BUS.register(this);
-
-        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -50,14 +44,10 @@ public class morevanillashields
         LOGGER.info(MOD_ID + ": This mod now runs with a config file. Feel free to use it!");
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-    }
-
-
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
+        LOGGER.info(MOD_ID + ": This mod is now running on a server. Please report any error or bugs.");
     }
 
 

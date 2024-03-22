@@ -73,3 +73,12 @@ Changelog 1.0.8-1.20.2:
 
 - Fixed Config File
 - Fixed Amethyst Shield Recipe (sorry for late fix)
+
+Changelog 1.0.9-1.20.2:
+
+- Added Update Checker
+- Added Homepage Button
+- Added Issue Tracker
+- Optimized Config file
+- Added Server Starting Message
+- Changed GitHub Repositorys
