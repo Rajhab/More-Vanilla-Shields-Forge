@@ -40,7 +40,8 @@ public class morevanillashields
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info(MOD_ID + ": This mod now runs with a config file. Feel free to use it!");
+        //LOGGER.info(MOD_ID + ": This mod now runs with a config file. Feel free to use it!");
+        LOGGER.info(MOD_ID + ": This mod does run with a non functional config file!");
     }
 
 

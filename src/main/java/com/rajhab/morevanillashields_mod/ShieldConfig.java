@@ -31,7 +31,8 @@ public class ShieldConfig {
     static {
         BUILDER.push("Config for More Vanilla Shields!");
 
-        BUILDER.comment("README!!!!!!!!!!!!!!!!!!!! Only change the Values before creating a world or a server! Or change the values before creating or having a Shield! If you change the values (and you already used a shield), your world should break");
+        //BUILDER.comment("README!!!!!!!!!!!!!!!!!!!! Only change the Values before creating a world or a server! Or change the values before creating or having a Shield! If you change the values (and you already used a shield), your world should break");
+        BUILDER.comment("CONFIG NOT WORKING IN THIS VERSION!!!!!!!!!!!!");
 
         LEATHER_SHIELD_DURABILITY = BUILDER.comment("Durability of Leather Shield. Default Durability is 196")
                 .define("leatherShieldDurability", 196);
