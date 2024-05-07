@@ -11,6 +11,6 @@
     "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "morevanillashields:netherite_shield"
+    "id": "morevanillashields:netherite_shield"
   }
 }
