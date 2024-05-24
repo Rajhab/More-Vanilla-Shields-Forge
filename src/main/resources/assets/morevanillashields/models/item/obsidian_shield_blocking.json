@@ -1,10 +1,10 @@
 {
-	"parent": "morevanillashields:item/obsidian_shield_base",
+	"parent": "builtin/entity",
 	"gui_light": "front",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "morevanillashields:item/obsidian_shield",
-		"particle": "morevanillashields:item/obsidian_shield"
+		"0": "morevanillashields:entity/obsidian_shield_base_nopattern",
+		"particle": "morevanillashields:entity/obsidian_shield_base_nopattern"
 	},
 	"display": {
 		"thirdperson_righthand": {

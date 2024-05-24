@@ -1,19 +1,15 @@
 package com.rajhab.morevanillashields_mod;
 
 import com.mojang.logging.LogUtils;
-import com.rajhab.morevanillashields_mod.item.ModItems;
-import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.resources.ResourceLocation;
+import com.rajhab.morevanillashields_mod.util.ModRecipeSerializer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -27,16 +23,17 @@ public class morevanillashields
 
     public static final String MOD_ID = "morevanillashields";
     private static final Logger LOGGER = LogUtils.getLogger();
+
     public morevanillashields()
     {
-        //ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MoreVanillaShieldsConfig.SPEC, "morevanillashields-common.toml");
-        //ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ShieldConfig.SPEC, "morevanillashields-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
+        MinecraftForge.EVENT_BUS.register(this);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         ITEMS.register(modEventBus);
+        ModRecipeSerializer.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
-        MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -53,17 +50,14 @@ public class morevanillashields
 
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
 
-        private static ResourceLocation BLOCKING_PROPERTY_RESLOC =
+        /*private static ResourceLocation BLOCKING_PROPERTY_RESLOC =
                 new ResourceLocation(morevanillashields.MOD_ID, "blocking");
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
-
 
             event.enqueueWork(() -> {
 
@@ -83,9 +77,9 @@ public class morevanillashields
                     return $entity != null && $entity.isUsingItem() && $entity.getUseItem() == $itemStack ? 1.0F : 0.0F;
                 });
 
-                /*ItemProperties.register(ModItems.REDSTONE_SHIELD.get(), BLOCKING_PROPERTY_RESLOC, ($itemStack, $level, $entity, $seed) -> {
+                ItemProperties.register(ModItems.REDSTONE_SHIELD.get(), BLOCKING_PROPERTY_RESLOC, ($itemStack, $level, $entity, $seed) -> {
                     return $entity != null && $entity.isUsingItem() && $entity.getUseItem() == $itemStack ? 1.0F : 0.0F;
-                });*/
+                });
 
                 ItemProperties.register(ModItems.EMERALD_SHIELD.get(), BLOCKING_PROPERTY_RESLOC, ($itemStack, $level, $entity, $seed) -> {
                     return $entity != null && $entity.isUsingItem() && $entity.getUseItem() == $itemStack ? 1.0F : 0.0F;
@@ -158,5 +152,7 @@ public class morevanillashields
             });
 
         }
+    } */
+
     }
 }
