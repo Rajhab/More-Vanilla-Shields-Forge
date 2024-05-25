@@ -1,6 +1,8 @@
 package com.rajhab.morevanillashields_mod;
 
 import com.mojang.logging.LogUtils;
+import com.rajhab.morevanillashields_mod.item.ModCreativeModeTabs;
+import com.rajhab.morevanillashields_mod.item.ModItems;
 import com.rajhab.morevanillashields_mod.util.ModRecipeSerializer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,9 +15,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-
-import static com.rajhab.morevanillashields_mod.item.ModCreativeModeTabs.CREATIVE_MODE_TABS;
-import static com.rajhab.morevanillashields_mod.item.ModItems.ITEMS;
+//Thanks to Insane96 for some code examples
 
 @Mod(morevanillashields.MOD_ID)
 public class morevanillashields
@@ -30,9 +30,9 @@ public class morevanillashields
         MinecraftForge.EVENT_BUS.register(this);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
-        ITEMS.register(modEventBus);
+        ModItems.register(modEventBus);
         ModRecipeSerializer.register(modEventBus);
-        CREATIVE_MODE_TABS.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
     }
 

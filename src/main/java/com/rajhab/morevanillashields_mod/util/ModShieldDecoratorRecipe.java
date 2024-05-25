@@ -1,5 +1,6 @@
 package com.rajhab.morevanillashields_mod.util;
 
+import com.rajhab.morevanillashields_mod.item.ModItems;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.inventory.CraftingContainer;
@@ -35,9 +36,18 @@ public class ModShieldDecoratorRecipe extends CustomRecipe {
                     bannerStack = itemStack;
                 }
                 else {
-                    if (!(itemStack.getItem() instanceof ShieldItem)
+                    if (!(itemStack.is(ModItems.LEATHER_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.GOLD_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.DIAMOND_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.NETHERITE_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.EMERALD_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.AMETHYST_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.OBSIDIAN_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.COAL_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.END_CRYSTAL_SHIELD.get()))
                             || !shieldStack.isEmpty()
-                            || BlockItem.getBlockEntityData(itemStack) != null) {
+                            || BlockItem.getBlockEntityData(itemStack) != null
+                    ) {
                         return false;
                     }
 
@@ -60,7 +70,17 @@ public class ModShieldDecoratorRecipe extends CustomRecipe {
                 if (itemStack.getItem() instanceof BannerItem) {
                     bannerStack = itemStack;
                 }
-                else if (itemStack.getItem() instanceof ShieldItem) {
+                else if ((itemStack
+                        .is(ModItems.LEATHER_SHIELD.get())) ||
+                        (itemStack.is(ModItems.GOLD_SHIELD.get())) ||
+                        (itemStack.is(ModItems.DIAMOND_SHIELD.get())) ||
+                        (itemStack.is(ModItems.NETHERITE_SHIELD.get())) ||
+                        (itemStack.is(ModItems.EMERALD_SHIELD.get())) ||
+                        (itemStack.is(ModItems.AMETHYST_SHIELD.get())) ||
+                        (itemStack.is(ModItems.OBSIDIAN_SHIELD.get())) ||
+                        (itemStack.is(ModItems.COAL_SHIELD.get())) ||
+                        (itemStack.is(ModItems.END_CRYSTAL_SHIELD.get()))
+                ) {
                     shieldStack = itemStack.copy();
                 }
             }

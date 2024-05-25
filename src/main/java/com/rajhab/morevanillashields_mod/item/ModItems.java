@@ -36,13 +36,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.leather_shield").append(String.valueOf(ShieldConfig.LEATHER_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if(ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.leather_shield").append(String.valueOf(ShieldConfig.LEATHER_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
@@ -68,13 +71,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.gold_shield").append(String.valueOf(ShieldConfig.GOLD_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.gold_shield").append(String.valueOf(ShieldConfig.GOLD_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
@@ -98,13 +104,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.diamond_shield").append(String.valueOf(ShieldConfig.DIAMOND_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.diamond_shield").append(String.valueOf(ShieldConfig.DIAMOND_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
@@ -128,13 +137,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.glass_shield").append(String.valueOf(ShieldConfig.GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.glass_shield").append(String.valueOf(ShieldConfig.GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -148,13 +160,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.tinted_glass_shield").append(String.valueOf(ShieldConfig.TINTED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.tinted_glass_shield").append(String.valueOf(ShieldConfig.TINTED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -168,13 +183,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.brown_stained_glass_shield").append(String.valueOf(ShieldConfig.BROWN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.brown_stained_glass_shield").append(String.valueOf(ShieldConfig.BROWN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -188,13 +206,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.blue_stained_glass_shield").append(String.valueOf(ShieldConfig.BLUE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.blue_stained_glass_shield").append(String.valueOf(ShieldConfig.BLUE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -208,13 +229,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.cyan_stained_glass_shield").append(String.valueOf(ShieldConfig.CYAN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.cyan_stained_glass_shield").append(String.valueOf(ShieldConfig.CYAN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -228,13 +252,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.light_blue_stained_glass_shield").append(String.valueOf(ShieldConfig.LIGHT_BLUE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.light_blue_stained_glass_shield").append(String.valueOf(ShieldConfig.LIGHT_BLUE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -248,13 +275,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.green_stained_glass_shield").append(String.valueOf(ShieldConfig.GREEN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.green_stained_glass_shield").append(String.valueOf(ShieldConfig.GREEN_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -268,13 +298,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.lime_stained_glass_shield").append(String.valueOf(ShieldConfig.LIME_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.lime_stained_glass_shield").append(String.valueOf(ShieldConfig.LIME_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -288,13 +321,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.yellow_stained_glass_shield").append(String.valueOf(ShieldConfig.YELLOW_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.yellow_stained_glass_shield").append(String.valueOf(ShieldConfig.YELLOW_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -308,13 +344,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.pink_stained_glass_shield").append(String.valueOf(ShieldConfig.PINK_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.pink_stained_glass_shield").append(String.valueOf(ShieldConfig.PINK_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -328,13 +367,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.orange_stained_glass_shield").append(String.valueOf(ShieldConfig.ORANGE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.orange_stained_glass_shield").append(String.valueOf(ShieldConfig.ORANGE_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -348,13 +390,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.red_stained_glass_shield").append(String.valueOf(ShieldConfig.RED_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.red_stained_glass_shield").append(String.valueOf(ShieldConfig.RED_STAINED_GLASS_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
             });
 
@@ -368,13 +413,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.netherite_shield").append(String.valueOf(ShieldConfig.NETHERITE_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.netherite_shield").append(String.valueOf(ShieldConfig.NETHERITE_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
@@ -405,13 +453,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.emerald_shield").append(String.valueOf(ShieldConfig.EMERALD_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.emerald_shield").append(String.valueOf(ShieldConfig.EMERALD_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
@@ -435,13 +486,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.amethyst_shield").append(String.valueOf(ShieldConfig.AMETHYST_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.amethyst_shield").append(String.valueOf(ShieldConfig.AMETHYST_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
@@ -465,13 +519,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.obsidian_shield").append(String.valueOf(ShieldConfig.OBSIDIAN_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.obsidian_shield").append(String.valueOf(ShieldConfig.OBSIDIAN_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
@@ -500,13 +557,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.coal_shield").append(String.valueOf(ShieldConfig.COAL_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.coal_shield").append(String.valueOf(ShieldConfig.COAL_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
@@ -535,13 +595,16 @@ public class ModItems{
 
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-                    if (Screen.hasShiftDown()) {
-                        components.add(Component.translatable("item.moditems.end_crystal_shield").append(String.valueOf(ShieldConfig.END_CRYSTAL_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
-                    } else {
-                        components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
-                    }
 
-                    super.appendHoverText(stack, level, components, flag);
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if (Screen.hasShiftDown()) {
+                            components.add(Component.translatable("item.moditems.end_crystal_shield").append(String.valueOf(ShieldConfig.END_CRYSTAL_SHIELD_DURABILITY.get())).withStyle(ChatFormatting.DARK_AQUA));
+                        } else {
+                            components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                        }
+
+                        super.appendHoverText(stack, level, components, flag);
+                    }
                 }
 
                 @Override
