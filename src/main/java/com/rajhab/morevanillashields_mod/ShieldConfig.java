@@ -27,12 +27,15 @@ public class ShieldConfig {
     public static final ForgeConfigSpec.ConfigValue<Integer> OBSIDIAN_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> COAL_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> END_CRYSTAL_SHIELD_DURABILITY;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_TOOLTIPS;
 
     static {
         BUILDER.push("Config for More Vanilla Shields!");
 
         BUILDER.comment("README!!!!!!!!!!!!!!!!!!!! Only change the Values before creating a world or a server! Or change the values before creating or having a Shield! If you change the values (and you already used a shield), your world should break");
 
+        ENABLE_TOOLTIPS = BUILDER.comment("If you want tooltips to be enabled then let it on true")
+                .define("enableTooltips", true);
         LEATHER_SHIELD_DURABILITY = BUILDER.comment("Durability of Leather Shield. Default Durability is 196")
                 .define("leatherShieldDurability", 196);
         GOLD_SHIELD_DURABILITY = BUILDER.comment("Durability of Gold Shield. Default Durability is 322")
