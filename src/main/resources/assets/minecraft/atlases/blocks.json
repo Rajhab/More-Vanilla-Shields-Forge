@@ -1,0 +1,76 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/leather_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/leather_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/gold_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/gold_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/diamond_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/diamond_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/netherite_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/netherite_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/emerald_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/emerald_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/amethyst_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/amethyst_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/obsidian_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/obsidian_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/coal_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/coal_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/end_crystal_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/end_crystal_shield_base_nopattern"
+    }
+  ]
+}
