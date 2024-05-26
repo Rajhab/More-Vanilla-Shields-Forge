@@ -1,6 +1,9 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "category": "equipment",
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
   "base": {
     "item": "morevanillashields:diamond_shield"
   },
@@ -8,7 +11,6 @@
     "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "morevanillashields:netherite_shield",
-    "count": 1
+    "item": "morevanillashields:netherite_shield"
   }
 }
