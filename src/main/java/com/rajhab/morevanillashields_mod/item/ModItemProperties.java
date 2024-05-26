@@ -1,4 +1,4 @@
-package com.rajhab.morevanillashields_mod.item;
+package com.rajhab.morevanillashields_mod.item;/*package com.rajhab.morevanillashields_mod.item;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -93,3 +93,4 @@ public class ModItemProperties {
 
     }
 }
+*/
