@@ -27,3 +27,4 @@ Changelog 1.0.3-1.19.4:
 - Enhanced Creative Mode Tab
 - Added Shield Decoration Recipes to Misc Tab (recipe book)
 - Added enableTooltips Value to Config File
+- Fixed Netherite Shield Recipe
