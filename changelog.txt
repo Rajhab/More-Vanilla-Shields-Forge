@@ -2,3 +2,9 @@ Changelog 1.0.0-1.21:
 
 - Ported to a 1.21 version
 - Durability Configuration got removed
+
+Changelog 1.0.1-1.21:
+
+- Updated to 51.0.26
+- Added Redstone Shield with Particle System (lighting needed)
+- Added tooltip that shows if particles are enabled or disabled

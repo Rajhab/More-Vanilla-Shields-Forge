@@ -40,28 +40,6 @@ public class ModCreativeModeTabs {
             addAfter(pOutput, ModItems.YELLOW_STAINED_GLASS_SHIELD.get(), ModItems.PINK_STAINED_GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.PINK_STAINED_GLASS_SHIELD.get(), ModItems.ORANGE_STAINED_GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.ORANGE_STAINED_GLASS_SHIELD.get(), ModItems.RED_STAINED_GLASS_SHIELD.get());
-
-            /*pOutput.accept(ModItems.LEATHER_SHIELD);
-            pOutput.accept(ModItems.COAL_SHIELD);
-            pOutput.accept(ModItems.GOLD_SHIELD);
-            pOutput.accept(ModItems.EMERALD_SHIELD);
-            pOutput.accept(ModItems.AMETHYST_SHIELD);
-            pOutput.accept(ModItems.GLASS_SHIELD);
-            pOutput.accept(ModItems.TINTED_GLASS_SHIELD);
-            pOutput.accept(ModItems.BROWN_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.BLUE_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.CYAN_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.LIGHT_BLUE_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.GREEN_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.LIME_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.YELLOW_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.PINK_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.ORANGE_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.RED_STAINED_GLASS_SHIELD);
-            pOutput.accept(ModItems.DIAMOND_SHIELD);
-            pOutput.accept(ModItems.OBSIDIAN_SHIELD);
-            pOutput.accept(ModItems.NETHERITE_SHIELD);
-            pOutput.accept(ModItems.END_CRYSTAL_SHIELD); */
         }
     }
 
