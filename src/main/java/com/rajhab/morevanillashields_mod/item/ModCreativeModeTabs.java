@@ -26,7 +26,8 @@ public class ModCreativeModeTabs {
             addAfter(pOutput, ModItems.DIAMOND_SHIELD.get(), ModItems.NETHERITE_SHIELD.get());
             addAfter(pOutput, ModItems.NETHERITE_SHIELD.get(), ModItems.EMERALD_SHIELD.get());
             addAfter(pOutput, ModItems.EMERALD_SHIELD.get(), ModItems.AMETHYST_SHIELD.get());
-            addAfter(pOutput, ModItems.AMETHYST_SHIELD.get(), ModItems.OBSIDIAN_SHIELD.get());
+            addAfter(pOutput, ModItems.AMETHYST_SHIELD.get(), ModItems.REDSTONE_SHIELD.get());
+            addAfter(pOutput, ModItems.REDSTONE_SHIELD.get(), ModItems.OBSIDIAN_SHIELD.get());
             addAfter(pOutput, ModItems.OBSIDIAN_SHIELD.get(), ModItems.COAL_SHIELD.get());
             addAfter(pOutput, ModItems.COAL_SHIELD.get(), ModItems.END_CRYSTAL_SHIELD.get());
             addAfter(pOutput, ModItems.END_CRYSTAL_SHIELD.get(), ModItems.GLASS_SHIELD.get());

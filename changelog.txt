@@ -5,6 +5,6 @@ Changelog 1.0.0-1.21:
 
 Changelog 1.0.1-1.21:
 
-- Updated to 51.0.26
+- Updated to 51.0.29
 - Added Redstone Shield with Particle System (lighting needed)
 - Added tooltip that shows if particles are enabled or disabled

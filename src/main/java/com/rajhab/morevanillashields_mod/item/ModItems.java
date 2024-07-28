@@ -10,6 +10,7 @@ import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -553,13 +554,32 @@ public class ModItems extends Item.Properties {
 
                         Random rand = new Random();
 
-                        for (double countparticles = 0; countparticles <= ShieldConfig.REDSTONE_SHIELD_DENSITY.get(); ++countparticles) {
+                        if (!pLevel.isClientSide) {
+
+                            ServerLevel pServerLevel = (ServerLevel) pLevel;
+
+                            for (double countparticles = 0; countparticles <= ShieldConfig.REDSTONE_SHIELD_DENSITY.get(); ++countparticles) {
+                                pServerLevel.sendParticles(
+                                        new DustParticleOptions(DustParticleOptions.REDSTONE_PARTICLE_COLOR, pAlpha),
+                                        (pLivingEntity.position().x + offsetX) + (rand.nextDouble() - 0.5D),
+                                        (pLivingEntity.position().y + offsetY) + (rand.nextDouble() + 0.5D),
+                                        (pLivingEntity.position().z + offsetZ) + (rand.nextDouble() - 0.5D),
+                                        1,
+                                        0.0,
+                                        0.0,
+                                        0.0,
+                                        1.0
+                                );
+                            }
+                        }
+
+                        /*for (double countparticles = 0; countparticles <= ShieldConfig.REDSTONE_SHIELD_DENSITY.get(); ++countparticles) {
                             pLevel.addParticle(new DustParticleOptions(DustParticleOptions.REDSTONE_PARTICLE_COLOR, pAlpha),
                                     (pLivingEntity.position().x + offsetX) + (rand.nextDouble() - 0.5D),
                                     (pLivingEntity.position().y + offsetY) + (rand.nextDouble() + 0.5D),
                                     (pLivingEntity.position().z + offsetZ) + (rand.nextDouble() - 0.5D),
                                     0.0, 0.0, 0.0);
-                        }
+                        }*/
                     }
                 }
 
