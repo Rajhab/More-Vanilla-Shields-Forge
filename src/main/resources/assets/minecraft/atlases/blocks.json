@@ -50,6 +50,14 @@
     },
     {
       "type": "single",
+      "resource": "morevanillashields:entity/redstone_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/redstone_shield_base_nopattern"
+    },
+    {
+      "type": "single",
       "resource": "morevanillashields:entity/obsidian_shield_base"
     },
     {
