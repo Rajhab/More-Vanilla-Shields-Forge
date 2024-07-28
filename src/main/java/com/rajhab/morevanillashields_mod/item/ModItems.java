@@ -694,7 +694,7 @@ public class ModItems{
                     if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
                         if(ShieldConfig.ENABLE_PARTICLES.get()) {
                             if (Screen.hasShiftDown()) {
-                                components.add(Component.translatable("item.moditems.redstone_shield").append("250").append(Component.translatable("item.moditems.redstone_shield.particles_enabled")).withStyle(ChatFormatting.DARK_AQUA));
+                                components.add(Component.translatable("item.moditems.redstone_shield").append(String.valueOf(ShieldConfig.REDSTONE_SHIELD_DURABILITY.get())).append(Component.translatable("item.moditems.redstone_shield.particles_enabled")).withStyle(ChatFormatting.DARK_AQUA));
                             } else {
                                 components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                             }
@@ -703,7 +703,7 @@ public class ModItems{
                         }
                         else {
                             if (Screen.hasShiftDown()) {
-                                components.add(Component.translatable("item.moditems.redstone_shield").append("250").append(Component.translatable("item.moditems.redstone_shield.particles_disabled")).withStyle(ChatFormatting.DARK_AQUA));
+                                components.add(Component.translatable("item.moditems.redstone_shield").append(String.valueOf(ShieldConfig.REDSTONE_SHIELD_DURABILITY.get())).append(Component.translatable("item.moditems.redstone_shield.particles_disabled")).withStyle(ChatFormatting.DARK_AQUA));
                             } else {
                                 components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
                             }
