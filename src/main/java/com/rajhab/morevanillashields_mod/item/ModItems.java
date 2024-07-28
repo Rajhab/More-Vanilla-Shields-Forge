@@ -6,7 +6,10 @@ import com.rajhab.morevanillashields_mod.util.ModShieldTileEntityRenderer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShieldItem;
@@ -19,8 +22,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
+import org.joml.Vector3d;
 
 import java.util.List;
+import java.util.Random;
 import java.util.function.Consumer;
 
 public class ModItems{
@@ -607,6 +612,104 @@ public class ModItems{
                         }
 
                         super.appendHoverText(stack, level, components, flag);
+                    }
+                }
+
+                @Override
+                public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+                    consumer.accept(new IClientItemExtensions() {
+                        @Override
+                        public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                            return ModShieldTileEntityRenderer.instance;
+                        }
+                    });
+                }
+
+            });
+
+    public static final RegistryObject<Item> REDSTONE_SHIELD = ITEMS.register("redstone_shield",
+            () -> new ShieldItem(new Item.Properties().defaultDurability(250)) {
+
+                @Override
+                public int getMaxDamage(ItemStack stack) {
+                    return ShieldConfig.REDSTONE_SHIELD_DURABILITY.get();
+                }
+
+
+                @Override
+                public void onUseTick(Level pLevel, LivingEntity pLivingEntity, ItemStack pStack, int pRemainingUseDuration) {
+                    if(ShieldConfig.ENABLE_PARTICLES.get()) {
+
+                        float pAlpha = 1;
+                        float yaw = -pLivingEntity.getYRot();
+                        float pitch = -pLivingEntity.getXRot();
+
+                        double offsetX = 0.5 * Math.sin(Math.toRadians(yaw));
+                        double offsetY = 0.5 * Math.sin(Math.toRadians(pitch));
+                        double offsetZ = 0.5 * Math.cos(Math.toRadians(yaw));
+
+                        Vector3d offsetVector = new Vector3d(0.0, 0.0, 0.0);
+
+                        offsetVector.rotateX(-pitch * Math.PI / 180.0);
+                        offsetVector.rotateZ(-yaw * Math.PI / 180.0);
+
+                        offsetX += offsetVector.x;
+                        offsetY += offsetVector.y;
+                        offsetZ += offsetVector.z;
+
+                        Random rand = new Random();
+
+                        if (!pLevel.isClientSide) {
+
+                            ServerLevel pServerLevel = (ServerLevel) pLevel;
+
+                            for (double countparticles = 0; countparticles <= ShieldConfig.REDSTONE_SHIELD_DENSITY.get(); ++countparticles) {
+                                pServerLevel.sendParticles(
+                                        new DustParticleOptions(DustParticleOptions.REDSTONE_PARTICLE_COLOR, pAlpha),
+                                        (pLivingEntity.position().x + offsetX) + (rand.nextDouble() - 0.5D),
+                                        (pLivingEntity.position().y + offsetY) + (rand.nextDouble() + 0.5D),
+                                        (pLivingEntity.position().z + offsetZ) + (rand.nextDouble() - 0.5D),
+                                        1,
+                                        0.0,
+                                        0.0,
+                                        0.0,
+                                        1.0
+                                );
+                            }
+                        }
+
+                        /*for (double countparticles = 0; countparticles <= ShieldConfig.REDSTONE_SHIELD_DENSITY.get(); ++countparticles) {
+                            pLevel.addParticle(new DustParticleOptions(DustParticleOptions.REDSTONE_PARTICLE_COLOR, pAlpha),
+                                    (pLivingEntity.position().x + offsetX) + (rand.nextDouble() - 0.5D),
+                                    (pLivingEntity.position().y + offsetY) + (rand.nextDouble() + 0.5D),
+                                    (pLivingEntity.position().z + offsetZ) + (rand.nextDouble() - 0.5D),
+                                    0.0, 0.0, 0.0);
+                        }*/
+                    }
+                }
+
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get()) {
+                        if(ShieldConfig.ENABLE_PARTICLES.get()) {
+                            if (Screen.hasShiftDown()) {
+                                components.add(Component.translatable("item.moditems.redstone_shield").append("250").append(Component.translatable("item.moditems.redstone_shield.particles_enabled")).withStyle(ChatFormatting.DARK_AQUA));
+                            } else {
+                                components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                            }
+
+                            super.appendHoverText(stack, level, components, flag);
+                        }
+                        else {
+                            if (Screen.hasShiftDown()) {
+                                components.add(Component.translatable("item.moditems.redstone_shield").append("250").append(Component.translatable("item.moditems.redstone_shield.particles_disabled")).withStyle(ChatFormatting.DARK_AQUA));
+                            } else {
+                                components.add(Component.translatable("item.moditems.shift").withStyle(ChatFormatting.LIGHT_PURPLE));
+                            }
+
+                            super.appendHoverText(stack, level, components, flag);
+                        }
                     }
                 }
 
