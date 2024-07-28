@@ -61,6 +61,8 @@ public class ModShieldTileEntityRenderer extends BlockEntityWithoutLevelRenderer
             rendermaterial = flag ? ModModelPredicateProvider.LOCATION_EMERALD_SHIELD_BASE : ModModelPredicateProvider.LOCATION_EMERALD_SHIELD_BASE_NOPATTERN;
         } else if (shield == ModItems.AMETHYST_SHIELD.get()) {
             rendermaterial = flag ? ModModelPredicateProvider.LOCATION_AMETHYST_SHIELD_BASE : ModModelPredicateProvider.LOCATION_AMETHYST_SHIELD_BASE_NOPATTERN;
+        } else if (shield == ModItems.REDSTONE_SHIELD.get()) {
+            rendermaterial = flag ? ModModelPredicateProvider.LOCATION_REDSTONE_SHIELD_BASE : ModModelPredicateProvider.LOCATION_REDSTONE_SHIELD_BASE_NOPATTERN;
         } else if (shield == ModItems.OBSIDIAN_SHIELD.get()) {
             rendermaterial = flag ? ModModelPredicateProvider.LOCATION_OBSIDIAN_SHIELD_BASE : ModModelPredicateProvider.LOCATION_OBSIDIAN_SHIELD_BASE_NOPATTERN;
         } else if (shield == ModItems.COAL_SHIELD.get()) {
