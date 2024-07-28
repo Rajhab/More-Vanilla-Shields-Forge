@@ -106,3 +106,9 @@ Changelog 1.0.8-1.20.4:
 - Added Shield Decoration Recipes to Misc Tab (recipe book)
 - Sorted Creative Mod Tab Items
 - Added enableTooltips Value to Config File
+
+Changelog 1.0.9-1.20.4:
+
+- Updated to 49.1.4
+- Added Redstone Shield with Particle System (lighting needed)
+- Added tooltip that shows if particles are enabled or disabled
