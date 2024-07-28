@@ -44,6 +44,7 @@ public class ModShieldDecoratorRecipe extends CustomRecipe {
                             !(itemStack.is(ModItems.NETHERITE_SHIELD.get())) &&
                             !(itemStack.is(ModItems.EMERALD_SHIELD.get())) &&
                             !(itemStack.is(ModItems.AMETHYST_SHIELD.get())) &&
+                            !(itemStack.is(ModItems.REDSTONE_SHIELD.get())) &&
                             !(itemStack.is(ModItems.OBSIDIAN_SHIELD.get())) &&
                             !(itemStack.is(ModItems.COAL_SHIELD.get())) &&
                             !(itemStack.is(ModItems.END_CRYSTAL_SHIELD.get()))
@@ -78,6 +79,7 @@ public class ModShieldDecoratorRecipe extends CustomRecipe {
                         (itemStack.is(ModItems.NETHERITE_SHIELD.get())) ||
                         (itemStack.is(ModItems.EMERALD_SHIELD.get())) ||
                         (itemStack.is(ModItems.AMETHYST_SHIELD.get())) ||
+                        (itemStack.is(ModItems.REDSTONE_SHIELD.get())) ||
                         (itemStack.is(ModItems.OBSIDIAN_SHIELD.get())) ||
                         (itemStack.is(ModItems.COAL_SHIELD.get())) ||
                         (itemStack.is(ModItems.END_CRYSTAL_SHIELD.get()))
