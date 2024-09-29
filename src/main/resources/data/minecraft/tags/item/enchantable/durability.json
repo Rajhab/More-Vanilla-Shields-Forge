@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "morevanillashields:leather_shield",
+    "morevanillashields:gold_shield",
+    "morevanillashields:diamond_shield",
+    "morevanillashields:glass_shield",
+    "morevanillashields:tinted_glass_shield",
+    "morevanillashields:brown_stained_glass_shield",
+    "morevanillashields:blue_stained_glass_shield",
+    "morevanillashields:cyan_stained_glass_shield",
+    "morevanillashields:light_blue_stained_glass_shield",
+    "morevanillashields:green_stained_glass_shield",
+    "morevanillashields:lime_stained_glass_shield",
+    "morevanillashields:yellow_stained_glass_shield",
+    "morevanillashields:pink_stained_glass_shield",
+    "morevanillashields:orange_stained_glass_shield",
+    "morevanillashields:red_stained_glass_shield",
+    "morevanillashields:netherite_shield",
+    "morevanillashields:emerald_shield",
+    "morevanillashields:amethyst_shield",
+    "morevanillashields:obsidian_shield",
+    "morevanillashields:coal_shield",
+    "morevanillashields:end_crystal_shield",
+    "morevanillashields:redstone_shield"
+  ]
+}

@@ -6,7 +6,6 @@ import com.rajhab.morevanillashields_mod.util.ModShieldTileEntityRenderer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.network.chat.Component;
@@ -572,14 +571,6 @@ public class ModItems extends Item.Properties {
                                 );
                             }
                         }
-
-                        /*for (double countparticles = 0; countparticles <= ShieldConfig.REDSTONE_SHIELD_DENSITY.get(); ++countparticles) {
-                            pLevel.addParticle(new DustParticleOptions(DustParticleOptions.REDSTONE_PARTICLE_COLOR, pAlpha),
-                                    (pLivingEntity.position().x + offsetX) + (rand.nextDouble() - 0.5D),
-                                    (pLivingEntity.position().y + offsetY) + (rand.nextDouble() + 0.5D),
-                                    (pLivingEntity.position().z + offsetZ) + (rand.nextDouble() - 0.5D),
-                                    0.0, 0.0, 0.0);
-                        }*/
                     }
                 }
 

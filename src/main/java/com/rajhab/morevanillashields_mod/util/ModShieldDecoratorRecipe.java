@@ -2,10 +2,7 @@ package com.rajhab.morevanillashields_mod.util;
 
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CraftingInput;
@@ -13,8 +10,6 @@ import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BannerPatternLayers;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import org.jetbrains.annotations.NotNull;;
 
 public class ModShieldDecoratorRecipe extends CustomRecipe {
 

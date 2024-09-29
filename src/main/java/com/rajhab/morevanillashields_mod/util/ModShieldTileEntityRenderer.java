@@ -2,7 +2,6 @@ package com.rajhab.morevanillashields_mod.util;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.datafixers.util.Pair;
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import com.rajhab.morevanillashields_mod.morevanillashields;
 import net.minecraft.client.Minecraft;
@@ -14,18 +13,14 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.entity.BannerBlockEntity;
-import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.world.level.block.entity.BannerPatternLayers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
-import java.util.List;
 import java.util.Objects;
 
 @EventBusSubscriber(value = Dist.CLIENT, modid = morevanillashields.MOD_ID, bus = EventBusSubscriber.Bus.MOD)

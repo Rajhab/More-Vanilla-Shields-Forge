@@ -1,6 +1,5 @@
 package com.rajhab.morevanillashields_mod.util;
 
-
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import com.rajhab.morevanillashields_mod.morevanillashields;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
