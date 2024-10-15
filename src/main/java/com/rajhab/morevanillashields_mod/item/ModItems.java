@@ -5,18 +5,21 @@ import com.rajhab.morevanillashields_mod.morevanillashields;
 import com.rajhab.morevanillashields_mod.util.ModShieldTileEntityRenderer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.model.ShieldModel;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ShieldItem;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.common.ToolAction;
+import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -634,7 +637,6 @@ public class ModItems{
                 public int getMaxDamage(ItemStack stack) {
                     return ShieldConfig.REDSTONE_SHIELD_DURABILITY.get();
                 }
-
 
                 @Override
                 public void onUseTick(Level pLevel, LivingEntity pLivingEntity, ItemStack pStack, int pRemainingUseDuration) {
