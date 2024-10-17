@@ -1,6 +1,7 @@
 package com.rajhab.morevanillashields_mod;
 
 import com.mojang.logging.LogUtils;
+import com.rajhab.morevanillashields_mod.event.ShieldEventHandler;
 import com.rajhab.morevanillashields_mod.item.ModCreativeModeTabs;
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import com.rajhab.morevanillashields_mod.util.ModRecipeSerializer;
@@ -9,7 +10,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -33,6 +33,7 @@ public class morevanillashields
         ModItems.register(modEventBus);
         ModRecipeSerializer.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        MinecraftForge.EVENT_BUS.register(ShieldEventHandler.class);
 
     }
 
