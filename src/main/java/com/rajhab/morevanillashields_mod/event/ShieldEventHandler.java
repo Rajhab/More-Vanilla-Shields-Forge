@@ -3,9 +3,7 @@ package com.rajhab.morevanillashields_mod.event;
 import com.rajhab.morevanillashields_mod.ShieldConfig;
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,18 +17,18 @@ public class ShieldEventHandler {
     @SubscribeEvent
     public static void onPlayerHurt(LivingHurtEvent event) {
 
-        if(ShieldConfig.ENABLE_EXPLOSION.get()) {
+        if (ShieldConfig.ENABLE_EXPLOSION.get()) {
 
             if (event.getEntity() instanceof LivingEntity) {
                 LivingEntity livingEntity = event.getEntity();
 
-                if (livingEntity.isBlocking()) {
+                if (!livingEntity.getCommandSenderWorld().isClientSide && livingEntity.isBlocking()) {
                     ItemStack shield = livingEntity.getUseItem();
 
                     if (shield.getItem() == ModItems.END_CRYSTAL_SHIELD.get()) {
 
                         Random random = new Random();
-                        if (random.nextInt(30) == 0) {
+                        if (random.nextInt(10) == 0) {
 
                             boolean explosionDestroyBlocks = ShieldConfig.EXPLOSION_DESTROY_BLOCKS.get();
                             Level.ExplosionInteraction explosionType = explosionDestroyBlocks
@@ -47,7 +45,7 @@ public class ShieldEventHandler {
                             );
 
                             shield.hurtAndBreak(150, livingEntity, (entity) -> {
-                                entity.broadcastBreakEvent(livingEntity.getUsedItemHand());  // Show shield break animation if needed
+                                entity.broadcastBreakEvent(livingEntity.getUsedItemHand());
                             });
                         }
                     }
