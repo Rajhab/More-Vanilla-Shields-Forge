@@ -1,6 +1,7 @@
 package com.rajhab.morevanillashields_mod;
 
 import com.mojang.logging.LogUtils;
+import com.rajhab.morevanillashields_mod.event.ShieldEventHandler;
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import com.rajhab.morevanillashields_mod.util.ModRecipeSerializer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,15 +24,15 @@ public class morevanillashields
     public static final String MOD_ID = "morevanillashields";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public morevanillashields(FMLJavaModLoadingContext context)
+    public morevanillashields()
     {
-        context.registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
         MinecraftForge.EVENT_BUS.register(this);
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         ModItems.register(modEventBus);
         ModRecipeSerializer.register(modEventBus);
-
+        MinecraftForge.EVENT_BUS.register(ShieldEventHandler.class);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
