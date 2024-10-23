@@ -1,3 +1,13 @@
 Changelog 1.0.0-1.21.1:
 
 - Ported from 1.0.2-1.21 [FORGE] to 1.0.0-1.21.1 [FORGE]
+
+Changelog 1.0.1-1.21.1:
+
+- Updated to 52.0.22
+- Fixed Compatibility with older forge versions
+- Fixed Mod Descriptions
+- Fixed Redstone Shield Particle Density
+- Fixed typo in german translation
+- Made the End Crystal Shield explosive (turned off by default. To enable go into config)
+- Made End Crystal Shield Explosion serversided
