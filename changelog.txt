@@ -107,6 +107,9 @@ Changelog 1.1.2-1.20.1:
 
 Changelog 1.1.3-1.20.1:
 
-- Downgraded to forge 47.3.1 (compatibility issues)
+- Downgraded to forge 47.3.7 (compatibility issues)
+- Fixed Compatibility with older forge versions
+- Fixed Redstone Shield Particle Density
+- Fixed typo in german translation
 - Made the End Crystal Shield explosive (turned on by default. To disable go into config)
 - Made End Crystal Shield Explosion serversided
