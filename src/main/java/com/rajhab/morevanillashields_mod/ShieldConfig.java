@@ -43,7 +43,7 @@ public class ShieldConfig {
         ENABLE_TOOLTIPS = BUILDER.comment("If you want tooltips to be enabled then let it on true")
                 .define("enableTooltips", true);
         ENABLE_EXPLOSION = BUILDER.comment("If you want explosions to be enabled, then put it on true")
-                .define("enableExplosion", false);
+                .define("enableExplosion", true);
         EXPLOSION_DESTROY_BLOCKS = BUILDER.comment("If you want blocks to be destroyed when the end crystal shield explodes, then put it on true")
                 .define("explosionDestroyBlocks", false);
         ENABLE_PARTICLES = BUILDER.comment("If you want particles to be enabled then let it on true")
