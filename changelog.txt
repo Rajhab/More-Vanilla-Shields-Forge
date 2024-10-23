@@ -9,5 +9,5 @@ Changelog 1.0.1-1.21.1:
 - Fixed Mod Descriptions
 - Fixed Redstone Shield Particle Density
 - Fixed typo in german translation
-- Made the End Crystal Shield explosive (turned off by default. To enable go into config)
+- Made the End Crystal Shield explosive (turned on by default. To disable go into config)
 - Made End Crystal Shield Explosion serversided
