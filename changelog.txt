@@ -39,3 +39,11 @@ Changelog 1.0.5-1.19.4:
 
 - Updated to forge 45.3.6
 - Fixed Enchanting
+
+Changelog 1.0.6-1.19.4:
+
+- Fixed Compatibility with older forge versions
+- Fixed Redstone Shield Particle Density
+- Fixed typo in german translation
+- Made the End Crystal Shield explosive (turned on by default. To disable go into config)
+- Made End Crystal Shield Explosion serversided
