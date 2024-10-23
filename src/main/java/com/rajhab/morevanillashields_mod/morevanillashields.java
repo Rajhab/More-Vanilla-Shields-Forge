@@ -1,6 +1,7 @@
 package com.rajhab.morevanillashields_mod;
 
 import com.mojang.logging.LogUtils;
+import com.rajhab.morevanillashields_mod.event.ShieldEventHandler;
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import com.rajhab.morevanillashields_mod.util.ModRecipeSerializer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -17,6 +18,7 @@ import org.slf4j.Logger;
 //Thanks to Insane96 for some code examples
 
 @Mod(morevanillashields.MOD_ID)
+
 public class morevanillashields
 {
 
@@ -31,7 +33,7 @@ public class morevanillashields
         modEventBus.addListener(this::commonSetup);
         ModItems.register(modEventBus);
         ModRecipeSerializer.register(modEventBus);
-
+        MinecraftForge.EVENT_BUS.register(ShieldEventHandler.class);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
