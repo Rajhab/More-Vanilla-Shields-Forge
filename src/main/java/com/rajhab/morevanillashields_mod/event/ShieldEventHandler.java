@@ -2,6 +2,7 @@ package com.rajhab.morevanillashields_mod.event;
 
 import com.rajhab.morevanillashields_mod.ShieldConfig;
 import com.rajhab.morevanillashields_mod.item.ModItems;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -44,7 +45,7 @@ public class ShieldEventHandler {
                                     explosionType                   // Does or does not destroy blocks
                             );
 
-                            shield.hurtAndBreak(175, livingEntity, (entity) -> {
+                            shield.hurtAndBreak(175, ((ServerPlayer) livingEntity), (entity) -> {
                                 entity.broadcastBreakEvent(livingEntity.getUsedItemHand());
                             });
                         }
