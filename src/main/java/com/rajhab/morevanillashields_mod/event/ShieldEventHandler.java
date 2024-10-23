@@ -28,7 +28,7 @@ public class ShieldEventHandler {
                     if (shield.getItem() == ModItems.END_CRYSTAL_SHIELD.get()) {
 
                         Random random = new Random();
-                        if (random.nextInt(10) == 0) {
+                        if (random.nextInt(30) == 0) {
 
                             boolean explosionDestroyBlocks = ShieldConfig.EXPLOSION_DESTROY_BLOCKS.get();
                             Level.ExplosionInteraction explosionType = explosionDestroyBlocks
@@ -44,7 +44,7 @@ public class ShieldEventHandler {
                                     explosionType                   // Does or does not destroy blocks
                             );
 
-                            shield.hurtAndBreak(150, livingEntity, (entity) -> {
+                            shield.hurtAndBreak(175, livingEntity, (entity) -> {
                                 entity.broadcastBreakEvent(livingEntity.getUsedItemHand());
                             });
                         }

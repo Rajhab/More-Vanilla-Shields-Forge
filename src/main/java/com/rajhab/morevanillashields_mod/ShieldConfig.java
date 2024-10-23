@@ -25,6 +25,7 @@ public class ShieldConfig {
     public static final ForgeConfigSpec.ConfigValue<Integer> EMERALD_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> AMETHYST_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> REDSTONE_SHIELD_DURABILITY;
+    public static final ForgeConfigSpec.ConfigValue<Integer> COPPER_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> OBSIDIAN_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> COAL_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> END_CRYSTAL_SHIELD_DURABILITY;
@@ -87,6 +88,8 @@ public class ShieldConfig {
                 .define("amethystShieldDurability", 432);
         REDSTONE_SHIELD_DURABILITY = BUILDER.comment("Durability of Redstone Shield. Default Durability is 250")
                 .define("redstoneShieldDurability", 250);
+        COPPER_SHIELD_DURABILITY = BUILDER.comment("Durability of Copper Shield. Default Durability is 250")
+                .define("copperShieldDurability", 250);
         OBSIDIAN_SHIELD_DURABILITY = BUILDER.comment("Durability of Obsidian Shield. Default Durability is 610")
                 .define("obsidianShieldDurability", 610);
         COAL_SHIELD_DURABILITY = BUILDER.comment("Durability of Coal Shield. Default Durability is 268")

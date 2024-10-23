@@ -107,6 +107,6 @@ Changelog 1.1.2-1.20.1:
 
 Changelog 1.1.3-1.20.1:
 
-- Updated to forge 47.3.11
+- Downgraded to forge 47.3.1 (compatibility issues)
 - Made the End Crystal Shield explosive (turned off by default. To enable go into config)
 - Made End Crystal Shield Explosion serversided
