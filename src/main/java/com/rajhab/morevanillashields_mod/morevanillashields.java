@@ -1,6 +1,7 @@
 package com.rajhab.morevanillashields_mod;
 
 import com.mojang.logging.LogUtils;
+import com.rajhab.morevanillashields_mod.event.ShieldEventHandler;
 import com.rajhab.morevanillashields_mod.item.ModCreativeModeTabs;
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import com.rajhab.morevanillashields_mod.util.ModRecipeSerializer;
@@ -33,6 +34,7 @@ public class morevanillashields
         ModItems.register(modEventBus);
         ModRecipeSerializer.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        MinecraftForge.EVENT_BUS.register(ShieldEventHandler.class);
 
     }
 
