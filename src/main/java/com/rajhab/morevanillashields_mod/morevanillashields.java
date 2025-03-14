@@ -25,18 +25,17 @@ public class morevanillashields
     public static final String MOD_ID = "morevanillashields";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public morevanillashields()
+    public morevanillashields(FMLJavaModLoadingContext context)
     {
-        //context.registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
+        context.registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
+        //ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
         MinecraftForge.EVENT_BUS.register(this);
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = context.getModEventBus();
         modEventBus.addListener(this::commonSetup);
         ModItems.register(modEventBus);
         ModRecipeSerializer.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(ShieldEventHandler.class);
-
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

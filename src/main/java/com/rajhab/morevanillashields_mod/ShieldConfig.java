@@ -26,14 +26,17 @@ public class ShieldConfig {
     public static final ForgeConfigSpec.ConfigValue<Integer> AMETHYST_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> REDSTONE_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> COPPER_SHIELD_DURABILITY;
+    public static final ForgeConfigSpec.ConfigValue<Integer> MAGMA_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> OBSIDIAN_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> COAL_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> END_CRYSTAL_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_TOOLTIPS;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_PARTICLES;
     public static final ForgeConfigSpec.ConfigValue<Integer> REDSTONE_SHIELD_DENSITY;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_MAGMA_BURN;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_EXPLOSION;
     public static final ForgeConfigSpec.ConfigValue<Boolean> EXPLOSION_DESTROY_BLOCKS;
+
 
     static {
         BUILDER.push("Config for More Vanilla Shields!");
@@ -42,6 +45,8 @@ public class ShieldConfig {
 
         ENABLE_TOOLTIPS = BUILDER.comment("If you want tooltips to be enabled then let it on true")
                 .define("enableTooltips", true);
+        ENABLE_MAGMA_BURN = BUILDER.comment("If you want enemies to burn when they hit the magma shield, then put it on true")
+                .define("enableMagmaBurn", true);
         ENABLE_EXPLOSION = BUILDER.comment("If you want explosions to be enabled, then put it on true")
                 .define("enableExplosion", true);
         EXPLOSION_DESTROY_BLOCKS = BUILDER.comment("If you want blocks to be destroyed when the end crystal shield explodes, then put it on true")
@@ -88,8 +93,10 @@ public class ShieldConfig {
                 .define("amethystShieldDurability", 432);
         REDSTONE_SHIELD_DURABILITY = BUILDER.comment("Durability of Redstone Shield. Default Durability is 250")
                 .define("redstoneShieldDurability", 250);
-        COPPER_SHIELD_DURABILITY = BUILDER.comment("Durability of Copper Shield. Default Durability is 250")
-                .define("copperShieldDurability", 250);
+        COPPER_SHIELD_DURABILITY = BUILDER.comment("Durability of Copper Shield. Default Durability is 355")
+                .define("copperShieldDurability", 355);
+        MAGMA_SHIELD_DURABILITY = BUILDER.comment("Durability of Magma Shield. Default Durability is 255")
+                .define("magmaShieldDurability", 255);
         OBSIDIAN_SHIELD_DURABILITY = BUILDER.comment("Durability of Obsidian Shield. Default Durability is 610")
                 .define("obsidianShieldDurability", 610);
         COAL_SHIELD_DURABILITY = BUILDER.comment("Durability of Coal Shield. Default Durability is 268")
