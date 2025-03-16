@@ -2,10 +2,7 @@ package com.rajhab.morevanillashields_mod.event;
 
 import com.rajhab.morevanillashields_mod.ShieldConfig;
 import com.rajhab.morevanillashields_mod.item.ModItems;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -19,7 +16,7 @@ import java.util.Random;
 public class ShieldEventHandler {
 
     @SubscribeEvent
-    public static void onPlayerHurt(LivingHurtEvent event) {
+    public static void onPlayerHurtWithEndCrystalShield(LivingHurtEvent event) {
 
         if (ShieldConfig.ENABLE_EXPLOSION.get()) {
 
@@ -48,9 +45,30 @@ public class ShieldEventHandler {
                                     explosionType                   // Does or does not destroy blocks
                             );
 
-                            shield.hurtAndBreak(175, ((ServerPlayer) livingEntity), (entity) -> {
+                            shield.hurtAndBreak(65, ((ServerPlayer) livingEntity), (entity) -> {
                                 entity.broadcastBreakEvent(livingEntity.getUsedItemHand());
                             });
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerHurtWithMagmaShield(LivingHurtEvent event) {
+
+        if (ShieldConfig.ENABLE_MAGMA_BURN.get()) {
+
+            if (event.getEntity() instanceof LivingEntity) {
+                LivingEntity livingEntity = event.getEntity();
+
+                if (!livingEntity.getCommandSenderWorld().isClientSide && livingEntity.isBlocking()) {
+                    ItemStack shield = livingEntity.getUseItem();
+
+                    if (shield.getItem() == ModItems.MAGMA_SHIELD.get()) {
+                        if (event.getSource().getEntity() instanceof LivingEntity attacker) {
+                            attacker.setSecondsOnFire(5); // Set attacker on fire for 5 seconds
                         }
                     }
                 }
