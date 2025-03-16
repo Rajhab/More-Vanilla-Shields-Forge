@@ -18,6 +18,8 @@ public class ShieldConfig {
         BUILDER.push("Config for More Vanilla Shields!");
 
         BUILDER.comment("README!!!!!!!!!!!!!!!!!!!! Only change the Values before creating a world or a server! Or change the values before creating or having a Shield! If you change the values (and you already used a shield), your world should break");
+        BUILDER.comment("Please delete the config, if having Issues with the variables. It will regenerate after the next start of a world");
+
 
         ENABLE_TOOLTIPS = BUILDER.comment("If you want tooltips to be enabled then let it on true")
                 .define("enableTooltips", true);
