@@ -58,15 +58,18 @@ public class ShieldEventHandler {
     @SubscribeEvent
     public static void onPlayerHurtWithMagmaShield(LivingHurtEvent event) {
 
-        if (event.getEntity() instanceof LivingEntity) {
-            LivingEntity livingEntity = event.getEntity();
+        if (ShieldConfig.ENABLE_MAGMA_BURN.get()) {
 
-            if (!livingEntity.getCommandSenderWorld().isClientSide && livingEntity.isBlocking()) {
-                ItemStack shield = livingEntity.getUseItem();
+            if (event.getEntity() instanceof LivingEntity) {
+                LivingEntity livingEntity = event.getEntity();
 
-                if (shield.getItem() == ModItems.MAGMA_SHIELD.get()) {
-                    if (event.getSource().getEntity() instanceof LivingEntity attacker) {
-                        attacker.setSecondsOnFire(5); // Set attacker on fire for 5 seconds
+                if (!livingEntity.getCommandSenderWorld().isClientSide && livingEntity.isBlocking()) {
+                    ItemStack shield = livingEntity.getUseItem();
+
+                    if (shield.getItem() == ModItems.MAGMA_SHIELD.get()) {
+                        if (event.getSource().getEntity() instanceof LivingEntity attacker) {
+                            attacker.setSecondsOnFire(5); // Set attacker on fire for 5 seconds
+                        }
                     }
                 }
             }

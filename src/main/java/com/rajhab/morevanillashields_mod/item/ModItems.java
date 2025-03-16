@@ -7,6 +7,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
@@ -340,6 +341,26 @@ public class ModItems{
                     });
                 }
 
+    });
+
+    public static final RegistryObject<Item> COPPER_SHIELD = ITEMS.register("copper_shield",
+            () -> new ShieldItem(new Item.Properties().defaultDurability(325)) {
+
+                @Override
+                public int getMaxDamage(ItemStack stack) {
+                    return ShieldConfig.COPPER_SHIELD_DURABILITY.get();
+                }
+
+                @Override
+                public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+                    consumer.accept(new IClientItemExtensions() {
+                        @Override
+                        public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                            return ModShieldTileEntityRenderer.instance;
+                        }
+                    });
+                }
+
             });
 
     public static final RegistryObject<Item> MAGMA_SHIELD = ITEMS.register("magma_shield",
@@ -360,6 +381,56 @@ public class ModItems{
                             components.add(Component.translatable("item.moditems.magma_shield_burn_disabled").withStyle(ChatFormatting.DARK_AQUA));
                         }
                         super.appendHoverText(stack, level, components, flag);
+                    }
+                }
+
+                @Override
+                public void onUseTick(Level pLevel, LivingEntity pLivingEntity, ItemStack pStack, int pRemainingUseDuration) {
+
+                    if(ShieldConfig.ENABLE_MAGMA_BURN.get()) {
+
+                        if (ShieldConfig.ENABLE_PARTICLES.get()) {
+
+                            float yaw = -pLivingEntity.getYRot();
+                            float pitch = -pLivingEntity.getXRot();
+
+                            double offsetX = 0.5 * Math.sin(Math.toRadians(yaw));
+                            double offsetY = 0.5 * Math.sin(Math.toRadians(pitch));
+                            double offsetZ = 0.5 * Math.cos(Math.toRadians(yaw));
+
+                            Vector3d offsetVector = new Vector3d(0.0, 0.0, 0.0);
+
+                            offsetVector.rotateX(-pitch * Math.PI / 180.0);
+                            offsetVector.rotateZ(-yaw * Math.PI / 180.0);
+
+                            offsetX += offsetVector.x;
+                            offsetY += offsetVector.y;
+                            offsetZ += offsetVector.z;
+
+                            Random rand = new Random();
+
+                            if (!pLevel.isClientSide) {
+
+                                ServerLevel pServerLevel = (ServerLevel) pLevel;
+
+                                for (double countparticles = 0; countparticles <= ShieldConfig.MAGMA_SHIELD_DENSITY.get(); ++countparticles) {
+                                    // Spawn particle
+                                    double particleX = (pLivingEntity.position().x + offsetX) + (rand.nextDouble() - 0.5D);
+                                    double particleY = (pLivingEntity.position().y + offsetY) + (rand.nextDouble() + 0.5D);
+                                    double particleZ = (pLivingEntity.position().z + offsetZ) + (rand.nextDouble() - 0.5D);
+
+                                    pServerLevel.sendParticles(
+                                            ParticleTypes.SMALL_FLAME,
+                                            particleX, particleY, particleZ,
+                                            1,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.1
+                                    );
+                                }
+                            }
+                        }
                     }
                 }
 

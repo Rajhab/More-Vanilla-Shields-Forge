@@ -34,6 +34,7 @@ public class ModModelPredicateProvider {
                     ModItems.EMERALD_SHIELD.get(),
                     ModItems.AMETHYST_SHIELD.get(),
                     ModItems.REDSTONE_SHIELD.get(),
+                    ModItems.COPPER_SHIELD.get(),
                     ModItems.OBSIDIAN_SHIELD.get(),
                     ModItems.MAGMA_SHIELD.get(),
                     ModItems.COAL_SHIELD.get(),
@@ -81,6 +82,8 @@ public class ModModelPredicateProvider {
                     LOCATION_AMETHYST_SHIELD_BASE_NOPATTERN,
                     LOCATION_REDSTONE_SHIELD_BASE,
                     LOCATION_REDSTONE_SHIELD_BASE_NOPATTERN,
+                    LOCATION_COPPER_SHIELD_BASE,
+                    LOCATION_COPPER_SHIELD_BASE_NOPATTERN,
                     LOCATION_MAGMA_SHIELD_BASE,
                     LOCATION_MAGMA_SHIELD_BASE_NOPATTERN,
                     LOCATION_OBSIDIAN_SHIELD_BASE,
@@ -123,6 +126,8 @@ public class ModModelPredicateProvider {
     public static final Material LOCATION_AMETHYST_SHIELD_BASE_NOPATTERN = material("entity/amethyst_shield_base_nopattern");
     public static final Material LOCATION_REDSTONE_SHIELD_BASE = material("entity/redstone_shield_base");
     public static final Material LOCATION_REDSTONE_SHIELD_BASE_NOPATTERN = material("entity/redstone_shield_base_nopattern");
+    public static final Material LOCATION_COPPER_SHIELD_BASE = material("entity/copper_shield_base");
+    public static final Material LOCATION_COPPER_SHIELD_BASE_NOPATTERN = material("entity/copper_shield_base_nopattern");
     public static final Material LOCATION_MAGMA_SHIELD_BASE = material("entity/magma_shield_base");
     public static final Material LOCATION_MAGMA_SHIELD_BASE_NOPATTERN = material("entity/magma_shield_base_nopattern");
     public static final Material LOCATION_OBSIDIAN_SHIELD_BASE = material("entity/obsidian_shield_base");

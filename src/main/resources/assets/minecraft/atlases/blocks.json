@@ -58,6 +58,14 @@
     },
     {
       "type": "single",
+      "resource": "morevanillashields:entity/copper_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/copper_shield_base_nopattern"
+    },
+    {
+      "type": "single",
       "resource": "morevanillashields:entity/magma_shield_base"
     },
     {
