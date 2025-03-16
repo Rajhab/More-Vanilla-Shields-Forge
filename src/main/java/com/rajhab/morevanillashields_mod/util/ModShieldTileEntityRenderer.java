@@ -14,7 +14,10 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BannerPatternLayers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
@@ -63,6 +66,10 @@ public class ModShieldTileEntityRenderer extends BlockEntityWithoutLevelRenderer
             rendermaterial = flag ? ModModelPredicateProvider.LOCATION_AMETHYST_SHIELD_BASE : ModModelPredicateProvider.LOCATION_AMETHYST_SHIELD_BASE_NOPATTERN;
         } else if (shield == ModItems.REDSTONE_SHIELD.get()) {
             rendermaterial = flag ? ModModelPredicateProvider.LOCATION_REDSTONE_SHIELD_BASE : ModModelPredicateProvider.LOCATION_REDSTONE_SHIELD_BASE_NOPATTERN;
+        } else if (shield == ModItems.COPPER_SHIELD.get()) {
+            rendermaterial = flag ? ModModelPredicateProvider.LOCATION_COPPER_SHIELD_BASE : ModModelPredicateProvider.LOCATION_COPPER_SHIELD_BASE_NOPATTERN;
+        } else if (shield == ModItems.MAGMA_SHIELD.get()) {
+            rendermaterial = flag ? ModModelPredicateProvider.LOCATION_MAGMA_SHIELD_BASE : ModModelPredicateProvider.LOCATION_MAGMA_SHIELD_BASE_NOPATTERN;
         } else if (shield == ModItems.OBSIDIAN_SHIELD.get()) {
             rendermaterial = flag ? ModModelPredicateProvider.LOCATION_OBSIDIAN_SHIELD_BASE : ModModelPredicateProvider.LOCATION_OBSIDIAN_SHIELD_BASE_NOPATTERN;
         } else if (shield == ModItems.COAL_SHIELD.get()) {

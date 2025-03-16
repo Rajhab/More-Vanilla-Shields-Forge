@@ -3,7 +3,8 @@ package com.rajhab.morevanillashields_mod.util;
 import com.rajhab.morevanillashields_mod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BannerItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
@@ -39,6 +40,8 @@ public class ModShieldDecoratorRecipe extends CustomRecipe {
                                     !($$5.is(ModItems.EMERALD_SHIELD.get())) &&
                                     !($$5.is(ModItems.AMETHYST_SHIELD.get())) &&
                                     !($$5.is(ModItems.REDSTONE_SHIELD.get())) &&
+                                    !($$5.is(ModItems.COPPER_SHIELD.get())) &&
+                                    !($$5.is(ModItems.MAGMA_SHIELD.get())) &&
                                     !($$5.is(ModItems.OBSIDIAN_SHIELD.get())) &&
                                     !($$5.is(ModItems.COAL_SHIELD.get())) &&
                                     !($$5.is(ModItems.END_CRYSTAL_SHIELD.get()))
@@ -84,6 +87,8 @@ public class ModShieldDecoratorRecipe extends CustomRecipe {
                                 ($$5.is(ModItems.EMERALD_SHIELD.get())) ||
                                 ($$5.is(ModItems.AMETHYST_SHIELD.get())) ||
                                 ($$5.is(ModItems.REDSTONE_SHIELD.get())) ||
+                                ($$5.is(ModItems.COPPER_SHIELD.get())) ||
+                                ($$5.is(ModItems.MAGMA_SHIELD.get())) ||
                                 ($$5.is(ModItems.OBSIDIAN_SHIELD.get())) ||
                                 ($$5.is(ModItems.COAL_SHIELD.get())) ||
                                 ($$5.is(ModItems.END_CRYSTAL_SHIELD.get()))
