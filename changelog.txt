@@ -106,3 +106,19 @@ Changelog 1.1.3-1.20.2:
 - Fixed typo in german translation
 - Made the End Crystal Shield explosive (turned on by default. To disable go into config)
 - Made End Crystal Shield Explosion serversided
+
+Changelog 1.1.4-1.20.2:
+
+- Fixed forge compatibility
+- Added Copper Shield (325 durability, no function yet)
+- Added Magma Shield (255 durability)
+- Magma Shield burns enemies on hit (5 second burn time, configurable if turned on or off)
+- Removed all tooltips except for the Redstone Shield and End Crystal Shield
+- Reworked Tooltips for End Crystal Shield and Redstone Shield
+- Tooltips now only showing when advanced tooltips are activated (F3 + H)
+- Reduced wear and tear on the shield when the end crystal shield explodes (from 175 -> 65)
+
+COMING SOON:
+- Sculk Shield (emits a sculk signal for sculk sensors (opening doors for example))
+- Copper Shield function with lightning
+- Variants for Wind Burst Shield (knocks back enemies OR very high jumps)
