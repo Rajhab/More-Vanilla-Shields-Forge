@@ -25,11 +25,11 @@ public class morevanillashields
     public static final String MOD_ID = "morevanillashields";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public morevanillashields()
+    public morevanillashields(FMLJavaModLoadingContext context)
     {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
+        context.registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
         MinecraftForge.EVENT_BUS.register(this);
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = context.getModEventBus();
         modEventBus.addListener(this::commonSetup);
         ModItems.register(modEventBus);
         ModRecipeSerializer.register(modEventBus);
@@ -52,8 +52,11 @@ public class morevanillashields
             addAfter(pOutput, ModItems.DIAMOND_SHIELD.get(), ModItems.NETHERITE_SHIELD.get());
             addAfter(pOutput, ModItems.NETHERITE_SHIELD.get(), ModItems.EMERALD_SHIELD.get());
             addAfter(pOutput, ModItems.EMERALD_SHIELD.get(), ModItems.AMETHYST_SHIELD.get());
-            addAfter(pOutput, ModItems.AMETHYST_SHIELD.get(), ModItems.OBSIDIAN_SHIELD.get());
-            addAfter(pOutput, ModItems.OBSIDIAN_SHIELD.get(), ModItems.COAL_SHIELD.get());
+            addAfter(pOutput, ModItems.AMETHYST_SHIELD.get(), ModItems.REDSTONE_SHIELD.get());
+            addAfter(pOutput, ModItems.REDSTONE_SHIELD.get(), ModItems.COPPER_SHIELD.get());
+            addAfter(pOutput, ModItems.COPPER_SHIELD.get(), ModItems.OBSIDIAN_SHIELD.get());
+            addAfter(pOutput, ModItems.OBSIDIAN_SHIELD.get(), ModItems.MAGMA_SHIELD.get());
+            addAfter(pOutput, ModItems.MAGMA_SHIELD.get(), ModItems.COAL_SHIELD.get());
             addAfter(pOutput, ModItems.COAL_SHIELD.get(), ModItems.END_CRYSTAL_SHIELD.get());
             addAfter(pOutput, ModItems.END_CRYSTAL_SHIELD.get(), ModItems.GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.GLASS_SHIELD.get(), ModItems.TINTED_GLASS_SHIELD.get());
@@ -66,7 +69,6 @@ public class morevanillashields
             addAfter(pOutput, ModItems.YELLOW_STAINED_GLASS_SHIELD.get(), ModItems.PINK_STAINED_GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.PINK_STAINED_GLASS_SHIELD.get(), ModItems.ORANGE_STAINED_GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.ORANGE_STAINED_GLASS_SHIELD.get(), ModItems.RED_STAINED_GLASS_SHIELD.get());
-
         }
     }
 
