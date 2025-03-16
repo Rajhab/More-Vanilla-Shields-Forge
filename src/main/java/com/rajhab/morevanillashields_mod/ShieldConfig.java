@@ -34,7 +34,7 @@ public class ShieldConfig {
         REDSTONE_SHIELD_DENSITY = BUILDER.comment("Here you can set up the density of the redstone shield. (2500 as max bcs some of yall try to crash some games)")
                 .defineInRange("redstoneShieldDensity", 1, 1, 2500);
         MAGMA_SHIELD_DENSITY = BUILDER.comment("Here you can set up the density of the magma shield. (2500 as max bcs some of yall try to crash some games)")
-                .defineInRange("redstoneShieldDensity", 1, 1, 2500);
+                .defineInRange("magmaShieldDensity", 1, 1, 2500);
 
         BUILDER.pop();
         SPEC = BUILDER.build();
