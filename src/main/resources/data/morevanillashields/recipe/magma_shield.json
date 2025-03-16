@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "nmn",
+    "wnw",
+    " w "
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:magma_block"
+    },
+    "n": {
+      "item": "minecraft:netherrack"
+    },
+    "w": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "id": "morevanillashields:magma_shield"
+  }
+}

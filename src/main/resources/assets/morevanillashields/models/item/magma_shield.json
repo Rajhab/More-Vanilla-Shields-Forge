@@ -3,8 +3,8 @@
 	"gui_light": "front",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "morevanillashields:entity/copper_shield_base_nopattern",
-		"particle": "morevanillashields:entity/copper_shield_base_nopattern"
+		"0": "morevanillashields:entity/magma_shield_base_nopattern",
+		"particle": "morevanillashields:entity/magma_shield_base_nopattern"
 	},
 	"display": {
 		"thirdperson_righthand": {
@@ -48,7 +48,7 @@
 			"predicate": {
 				"morevanillashields:blocking": 1
 			},
-			"model": "morevanillashields:item/copper_shield_blocking"
+			"model": "morevanillashields:item/magma_shield_blocking"
 		}
 	]
 }

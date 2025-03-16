@@ -20,7 +20,7 @@ import java.util.Random;
 public class ShieldEventHandler {
 
     @SubscribeEvent
-    public static void onPlayerHurt(LivingHurtEvent event) {
+    public static void onPlayerHurtWithEndCrystalShield(LivingHurtEvent event) {
 
         if (ShieldConfig.ENABLE_EXPLOSION.get()) {
 
@@ -52,9 +52,31 @@ public class ShieldEventHandler {
                             Level pLevel = livingEntity.getCommandSenderWorld();
                             EquipmentSlot handSlot = livingEntity.getUsedItemHand() == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
 
-                            shield.hurtAndBreak(175, ((ServerLevel) pLevel), ((ServerPlayer) livingEntity),
+                            shield.hurtAndBreak(65, ((ServerLevel) pLevel), ((ServerPlayer) livingEntity),
                                     item -> livingEntity.onEquippedItemBroken(item, handSlot)
                             );
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerHurtWithMagmaShield(LivingHurtEvent event) {
+
+        if (ShieldConfig.ENABLE_MAGMA_BURN.get()) {
+
+            if (event.getEntity() instanceof LivingEntity) {
+                LivingEntity livingEntity = event.getEntity();
+
+                if (!livingEntity.getCommandSenderWorld().isClientSide && livingEntity.isBlocking()) {
+                    ItemStack shield = livingEntity.getUseItem();
+
+                    if (shield.getItem() == ModItems.MAGMA_SHIELD.get()) {
+                        if (event.getSource().getEntity() instanceof LivingEntity attacker) {
+                            attacker.isOnFire(); // Set attacker on fire for 5 seconds
+                            attacker.setRemainingFireTicks(100); // Set attacker on fire for 5 seconds
                         }
                     }
                 }

@@ -35,7 +35,6 @@ public class morevanillashields
         ModRecipeSerializer.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(ShieldEventHandler.class);
-
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
