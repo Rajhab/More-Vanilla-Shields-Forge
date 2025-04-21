@@ -343,6 +343,40 @@ public class ModItems{
 
     });
 
+    public static final RegistryObject<Item> ENDER_PEARL_SHIELD = ITEMS.register("ender_pearl_shield",
+            () -> new ShieldItem(new Item.Properties().defaultDurability(412)) {
+
+                @Override
+                public int getMaxDamage(ItemStack stack) {
+                    return ShieldConfig.ENDER_PEARL_SHIELD_DURABILITY.get();
+                }
+
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get() && Minecraft.getInstance().options.advancedItemTooltips) {
+                        if (ShieldConfig.ENABLE_TELEPORTATION.get()) {
+                            components.add(Component.translatable("item.moditems.ender_pearl_shield_teleportation_enabled").withStyle(ChatFormatting.DARK_AQUA));
+                        }
+                        else {
+                            components.add(Component.translatable("item.moditems.ender_pearl_shield_teleportation_disabled").withStyle(ChatFormatting.DARK_AQUA));
+                        }
+                        super.appendHoverText(stack, level, components, flag);
+                    }
+                }
+
+
+                @Override
+                public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+                    consumer.accept(new IClientItemExtensions() {
+                        @Override
+                        public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                            return ModShieldTileEntityRenderer.instance;
+                        }
+                    });
+                }
+
+            });
+
     public static final RegistryObject<Item> COPPER_SHIELD = ITEMS.register("copper_shield",
             () -> new ShieldItem(new Item.Properties().defaultDurability(325)) {
 

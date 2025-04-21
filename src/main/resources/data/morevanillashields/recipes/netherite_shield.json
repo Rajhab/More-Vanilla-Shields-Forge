@@ -12,5 +12,6 @@
   },
   "result": {
     "item": "morevanillashields:netherite_shield"
-  }
+  },
+  "show_notification": true
 }

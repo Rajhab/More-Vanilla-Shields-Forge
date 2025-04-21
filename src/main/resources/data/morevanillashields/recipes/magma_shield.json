@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "shield",
   "category": "equipment",
   "pattern": [
     "nmn",
@@ -19,5 +20,6 @@
   },
   "result": {
     "item": "morevanillashields:magma_shield"
-  }
+  },
+  "show_notification": true
 }

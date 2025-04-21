@@ -129,3 +129,12 @@ COMING SOON:
 - Sculk Shield (emits a sculk signal for sculk sensors (opening doors for example))
 - Copper Shield function with lightning
 - Variants for Wind Burst Shield (knocks back enemies OR very high jumps)
+
+Changelog 1.1.5-1.20.1:
+
+- Made Forge compatible with older forge versions and neoforge again
+- End Crystal Explosion and Magma Shield Burn now are only executed if the player is holding the shield (not any entity)
+
+- Increased Chance for End Crystal Shield to explode (from 30 in 1 -> 25 in 1)
+- Added Ender Pearl Shield (teleports the player around the enemy)
+- Fixed Recipe Book
