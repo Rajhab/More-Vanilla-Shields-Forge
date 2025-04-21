@@ -89,7 +89,7 @@ public class ShieldEventHandler {
     @SubscribeEvent
     public static void onPlayerHurtWithEnderPearlShield(LivingHurtEvent event) {
 
-        if (!ShieldConfig.ENABLE_TELEPORTATION.get()) {
+        if (ShieldConfig.ENABLE_TELEPORTATION.get()) {
 
             if (event.getEntity() instanceof ServerPlayer player) {
 
@@ -101,13 +101,6 @@ public class ShieldEventHandler {
                         if (event.getSource().getEntity() instanceof LivingEntity attacker) {
                             double distance = 2.5; // How far behind to teleport
                             double radians = getRadians(attacker);
-
-                            double offsetX = -Math.sin(radians) * distance;
-                            double offsetZ = Math.cos(radians) * distance;
-
-                            double targetX = attacker.getX() + offsetX;
-                            double targetY = attacker.getY();
-                            double targetZ = attacker.getZ() + offsetZ;
 
                             // Try multiple steps forward to avoid teleporting inside blocks
                             for (double step = distance; step >= 0.5; step -= 0.5) {
