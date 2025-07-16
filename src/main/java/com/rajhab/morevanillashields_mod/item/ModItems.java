@@ -344,7 +344,7 @@ public class ModItems{
     });
 
     public static final RegistryObject<Item> ENDER_PEARL_SHIELD = ITEMS.register("ender_pearl_shield",
-            () -> new ShieldItem(new Item.Properties().defaultDurability(412)) {
+            () -> new ShieldItem(new Item.Properties().defaultDurability(187)) {
 
                 @Override
                 public int getMaxDamage(ItemStack stack) {
