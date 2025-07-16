@@ -65,7 +65,7 @@ COMING SOON:
 - Copper Shield function with lightning
 - Variants for Wind Burst Shield (knocks back enemies OR very high jumps)
 
-Changelog 1.0.7-1.19.4:
+Changelog 1.0.8-1.19.4:
 
 - Made Forge compatible with older forge versions and neoforge again
 - End Crystal Explosion and Magma Shield Burn now are only executed if the player is holding the shield (not any entity)
