@@ -1,5 +1,6 @@
 {
   "type": "minecraft:smithing_transform",
+  "category": "equipment",
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"
   },
@@ -10,7 +11,7 @@
     "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "id": "morevanillashields:netherite_shield",
-    "count": 1
-  }
+    "id": "morevanillashields:netherite_shield"
+  },
+  "show_notification": true
 }

@@ -38,6 +38,7 @@ public class ModModelPredicateProvider {
                     ModItems.MAGMA_SHIELD.get(),
                     ModItems.COAL_SHIELD.get(),
                     ModItems.END_CRYSTAL_SHIELD.get(),
+                    ModItems.ENDER_PEARL_SHIELD.get(),
                     //Shields without Banner Support
                     ModItems.GLASS_SHIELD.get(),
                     ModItems.TINTED_GLASS_SHIELD.get(),
@@ -91,6 +92,8 @@ public class ModModelPredicateProvider {
                     LOCATION_COAL_SHIELD_BASE_NOPATTERN,
                     LOCATION_END_CRYSTAL_SHIELD_BASE,
                     LOCATION_END_CRYSTAL_SHIELD_BASE_NOPATTERN,
+                    LOCATION_ENDER_PEARL_SHIELD_BASE,
+                    LOCATION_ENDER_PEARL_SHIELD_BASE_NOPATTERN,
             }) {
                 event.addSprite(textures.texture());
             }
@@ -135,6 +138,8 @@ public class ModModelPredicateProvider {
     public static final Material LOCATION_COAL_SHIELD_BASE_NOPATTERN = material("entity/coal_shield_base_nopattern");
     public static final Material LOCATION_END_CRYSTAL_SHIELD_BASE = material("entity/end_crystal_shield_base");
     public static final Material LOCATION_END_CRYSTAL_SHIELD_BASE_NOPATTERN = material("entity/end_crystal_shield_base_nopattern");
+    public static final Material LOCATION_ENDER_PEARL_SHIELD_BASE = material("entity/ender_pearl_shield_base");
+    public static final Material LOCATION_ENDER_PEARL_SHIELD_BASE_NOPATTERN = material("entity/ender_pearl_shield_base_nopattern");
 
     @SuppressWarnings("deprecation")
     private static Material material(String path) {

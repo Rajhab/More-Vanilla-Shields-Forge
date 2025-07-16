@@ -237,6 +237,35 @@ public class ModItems extends Item.Properties {
 
             });
 
+    public static final RegistryObject<Item> ENDER_PEARL_SHIELD = ITEMS.register("ender_pearl_shield",
+            () -> new ShieldItem(new Item.Properties().durability(187)) {
+
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext level, List<Component> components, TooltipFlag flag) {
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get() && Minecraft.getInstance().options.advancedItemTooltips) {
+                        if (ShieldConfig.ENABLE_TELEPORTATION.get()) {
+                            components.add(Component.translatable("item.moditems.ender_pearl_shield_teleportation_enabled").withStyle(ChatFormatting.DARK_AQUA));
+                        }
+                        else {
+                            components.add(Component.translatable("item.moditems.ender_pearl_shield_teleportation_disabled").withStyle(ChatFormatting.DARK_AQUA));
+                        }
+                        super.appendHoverText(stack, level, components, flag);
+                    }
+                }
+
+
+                @Override
+                public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+                    consumer.accept(new IClientItemExtensions() {
+                        @Override
+                        public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                            return ModShieldTileEntityRenderer.instance;
+                        }
+                    });
+                }
+
+            });
+
     public static final RegistryObject<Item> COPPER_SHIELD = ITEMS.register("copper_shield",
             () -> new ShieldItem(new Item.Properties().durability(325)) {
 
