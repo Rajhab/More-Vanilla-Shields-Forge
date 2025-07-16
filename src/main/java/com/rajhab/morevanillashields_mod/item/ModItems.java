@@ -11,7 +11,10 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShieldItem;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
@@ -341,6 +344,40 @@ public class ModItems{
                     });
                 }
 
+    });
+
+    public static final RegistryObject<Item> ENDER_PEARL_SHIELD = ITEMS.register("ender_pearl_shield",
+            () -> new ShieldItem(new Item.Properties().defaultDurability(187)) {
+
+                @Override
+                public int getMaxDamage(ItemStack stack) {
+                    return ShieldConfig.ENDER_PEARL_SHIELD_DURABILITY.get();
+                }
+
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    if (ShieldConfig.ENABLE_TOOLTIPS.get() && Minecraft.getInstance().options.advancedItemTooltips) {
+                        if (ShieldConfig.ENABLE_TELEPORTATION.get()) {
+                            components.add(Component.translatable("item.moditems.ender_pearl_shield_teleportation_enabled").withStyle(ChatFormatting.DARK_AQUA));
+                        }
+                        else {
+                            components.add(Component.translatable("item.moditems.ender_pearl_shield_teleportation_disabled").withStyle(ChatFormatting.DARK_AQUA));
+                        }
+                        super.appendHoverText(stack, level, components, flag);
+                    }
+                }
+
+
+                @Override
+                public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+                    consumer.accept(new IClientItemExtensions() {
+                        @Override
+                        public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                            return ModShieldTileEntityRenderer.instance;
+                        }
+                    });
+                }
+
             });
 
     public static final RegistryObject<Item> COPPER_SHIELD = ITEMS.register("copper_shield",
@@ -507,10 +544,10 @@ public class ModItems{
 
                     if (ShieldConfig.ENABLE_TOOLTIPS.get() && Minecraft.getInstance().options.advancedItemTooltips) {
                         if(ShieldConfig.ENABLE_PARTICLES.get()) {
-                            components.add(Component.translatable("item.moditems.redstone_shield.particles_enabled").withStyle(ChatFormatting.DARK_AQUA));
+                                components.add(Component.translatable("item.moditems.redstone_shield.particles_enabled").withStyle(ChatFormatting.DARK_AQUA));
                         }
                         else {
-                            components.add(Component.translatable("item.moditems.redstone_shield.particles_disabled").withStyle(ChatFormatting.DARK_AQUA));
+                                components.add(Component.translatable("item.moditems.redstone_shield.particles_disabled").withStyle(ChatFormatting.DARK_AQUA));
                         }
 
                         super.appendHoverText(stack, level, components, flag);

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "shield",
   "category": "equipment",
   "pattern": [
     "wlw",
@@ -16,5 +17,6 @@
   },
   "result": {
     "item": "morevanillashields:leather_shield"
-  }
+  },
+  "show_notification": true
 }

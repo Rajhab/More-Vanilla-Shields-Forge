@@ -95,6 +95,14 @@
     {
       "type": "single",
       "resource": "morevanillashields:entity/end_crystal_shield_base_nopattern"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/ender_pearl_shield_base"
+    },
+    {
+      "type": "single",
+      "resource": "morevanillashields:entity/ender_pearl_shield_base_nopattern"
     }
   ]
 }

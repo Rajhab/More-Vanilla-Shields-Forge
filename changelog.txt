@@ -122,3 +122,20 @@ COMING SOON:
 - Sculk Shield (emits a sculk signal for sculk sensors (opening doors for example))
 - Copper Shield function with lightning
 - Variants for Wind Burst Shield (knocks back enemies OR very high jumps)
+
+Changelog 1.1.5-1.20.2:
+
+- Updated to forge 47.4.3
+- Made Forge compatible with older forge versions and neoforge again
+- End Crystal Explosion and Magma Shield Burn now are only executed if the player is holding the shield (not any entity)
+- Magma Shield and Ender Pearl Shield now only use special effects, if the enemy hits the shield and not the player.
+
+- Increased Chance for End Crystal Shield to explode (from 30 in 1 -> 25 in 1)
+- Added Ender Pearl Shield (teleports the player around the enemy, low durability)
+- Fixed Recipe Book
+
+TODO:
+- endermite spawning
+- Wind Burst Shield
+- Sculk Shield (only activates when CRITICAL HIT | non Critical Hit | hit with an axe)
+- Players decide themselves if they want to enable / disable special effects
