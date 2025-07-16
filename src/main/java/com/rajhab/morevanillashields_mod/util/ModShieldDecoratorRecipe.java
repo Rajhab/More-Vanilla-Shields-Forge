@@ -45,7 +45,8 @@ public class ModShieldDecoratorRecipe extends CustomRecipe {
                             !(itemstack2.is(ModItems.MAGMA_SHIELD.get())) &&
                             !(itemstack2.is(ModItems.OBSIDIAN_SHIELD.get())) &&
                             !(itemstack2.is(ModItems.COAL_SHIELD.get())) &&
-                            !(itemstack2.is(ModItems.END_CRYSTAL_SHIELD.get()))
+                            !(itemstack2.is(ModItems.END_CRYSTAL_SHIELD.get())) &&
+                            !(itemstack2.is(ModItems.ENDER_PEARL_SHIELD.get()))
                     ) {
                         return false;
                     }
@@ -91,7 +92,8 @@ public class ModShieldDecoratorRecipe extends CustomRecipe {
                         (itemstack2.is(ModItems.MAGMA_SHIELD.get())) ||
                         (itemstack2.is(ModItems.OBSIDIAN_SHIELD.get())) ||
                         (itemstack2.is(ModItems.COAL_SHIELD.get())) ||
-                        (itemstack2.is(ModItems.END_CRYSTAL_SHIELD.get()))
+                        (itemstack2.is(ModItems.END_CRYSTAL_SHIELD.get())) ||
+                        (itemstack2.is(ModItems.ENDER_PEARL_SHIELD.get()))
                 ) {
                     itemstack1 = itemstack2.copy();
                 }

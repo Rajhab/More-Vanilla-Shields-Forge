@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "equipment",
+  "group": "shield",
+  "category": "equipment",
   "pattern": [
     "wcw",
     "www",
@@ -21,5 +22,6 @@
   },
   "result": {
     "item": "morevanillashields:coal_shield"
-  }
+  },
+  "show_notification": true
 }
