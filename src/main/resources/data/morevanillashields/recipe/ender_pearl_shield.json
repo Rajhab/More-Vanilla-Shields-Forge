@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "shield",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "minecraft:end_stone"
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "P": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "EPE",
+    "WEW",
+    " W "
+  ],
+  "result": {
+    "id": "morevanillashields:ender_pearl_shield"
+  },
+  "show_notification": true
+}

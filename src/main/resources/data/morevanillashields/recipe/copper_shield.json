@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "shield",
   "category": "equipment",
   "pattern": [
     "wcw",
@@ -16,5 +17,6 @@
   },
   "result": {
     "id": "morevanillashields:copper_shield"
-  }
+  },
+  "show_notification": true
 }
