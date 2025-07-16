@@ -32,7 +32,8 @@ public class ModCreativeModeTabs {
             addAfter(pOutput, ModItems.OBSIDIAN_SHIELD.get(), ModItems.MAGMA_SHIELD.get());
             addAfter(pOutput, ModItems.MAGMA_SHIELD.get(), ModItems.COAL_SHIELD.get());
             addAfter(pOutput, ModItems.COAL_SHIELD.get(), ModItems.END_CRYSTAL_SHIELD.get());
-            addAfter(pOutput, ModItems.END_CRYSTAL_SHIELD.get(), ModItems.GLASS_SHIELD.get());
+            addAfter(pOutput, ModItems.END_CRYSTAL_SHIELD.get(), ModItems.ENDER_PEARL_SHIELD.get());
+            addAfter(pOutput, ModItems.ENDER_PEARL_SHIELD.get(), ModItems.GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.GLASS_SHIELD.get(), ModItems.TINTED_GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.TINTED_GLASS_SHIELD.get(), ModItems.BROWN_STAINED_GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.BROWN_STAINED_GLASS_SHIELD.get(), ModItems.BLUE_STAINED_GLASS_SHIELD.get());
