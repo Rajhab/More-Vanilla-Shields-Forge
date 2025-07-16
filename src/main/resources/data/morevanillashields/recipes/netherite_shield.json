@@ -1,6 +1,5 @@
 {
   "type": "minecraft:smithing",
-  "group": "equipment",
   "base": {
     "item": "morevanillashields:diamond_shield"
   },

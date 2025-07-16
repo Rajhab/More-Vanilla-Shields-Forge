@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "equipment",
+  "group": "shield",
+  "category": "equipment",
   "pattern": [
     "wcw",
     "www",
     " w "
   ],
   "key": {
-    "c": [
-      {
-        "item": "minecraft:weathered_copper"
-      }
-    ],
+    "c": {
+      "item": "minecraft:weathered_copper"
+    },
     "w": {
       "tag": "minecraft:planks"
     }
   },
   "result": {
     "item": "morevanillashields:copper_shield"
-  }
+  },
+  "show_notification": true
 }

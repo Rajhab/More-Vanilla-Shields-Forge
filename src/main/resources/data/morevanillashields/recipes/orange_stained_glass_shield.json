@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "equipment",
+  "group": "shield",
+  "category": "equipment",
   "pattern": [
     "bib",
     "bbb",
@@ -16,5 +17,6 @@
   },
   "result": {
     "item": "morevanillashields:orange_stained_glass_shield"
-  }
+  },
+  "show_notification": true
 }

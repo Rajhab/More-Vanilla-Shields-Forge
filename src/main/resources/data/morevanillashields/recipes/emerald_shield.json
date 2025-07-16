@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "equipment",
+  "group": "shield",
+  "category": "equipment",
   "pattern": [
     "wew",
     "www",
@@ -16,5 +17,6 @@
   },
   "result": {
     "item": "morevanillashields:emerald_shield"
-  }
+  },
+  "show_notification": true
 }

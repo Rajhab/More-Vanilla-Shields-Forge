@@ -30,11 +30,14 @@ public class ShieldConfig {
     public static final ForgeConfigSpec.ConfigValue<Integer> OBSIDIAN_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> COAL_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> END_CRYSTAL_SHIELD_DURABILITY;
+    public static final ForgeConfigSpec.ConfigValue<Integer> ENDER_PEARL_SHIELD_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_TOOLTIPS;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_PARTICLES;
     public static final ForgeConfigSpec.ConfigValue<Integer> REDSTONE_SHIELD_DENSITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> MAGMA_SHIELD_DENSITY;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_MAGMA_BURN;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_TELEPORTATION;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_THUNDER;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_EXPLOSION;
     public static final ForgeConfigSpec.ConfigValue<Boolean> EXPLOSION_DESTROY_BLOCKS;
 
@@ -49,6 +52,10 @@ public class ShieldConfig {
                 .define("enableTooltips", true);
         ENABLE_MAGMA_BURN = BUILDER.comment("If you want enemies to burn when they hit the magma shield, then put it on true")
                 .define("enableMagmaBurn", true);
+        ENABLE_TELEPORTATION = BUILDER.comment("If you want to teleport around the enemy, then put it on true")
+                .define("enableTeleportation", true);
+        ENABLE_THUNDER = BUILDER.comment("If you want the thunder to be enabled with the copper shield, then put it on true")
+                .define("enableThunder", true);
         ENABLE_EXPLOSION = BUILDER.comment("If you want explosions to be enabled, then put it on true")
                 .define("enableExplosion", true);
         EXPLOSION_DESTROY_BLOCKS = BUILDER.comment("If you want blocks to be destroyed when the end crystal shield explodes, then put it on true")
@@ -107,6 +114,8 @@ public class ShieldConfig {
                 .define("coalShieldDurability", 268);
         END_CRYSTAL_SHIELD_DURABILITY = BUILDER.comment("Durability of End Crystal Shield. Default Durability is 750")
                 .define("endCrystalShieldDurability", 750);
+        ENDER_PEARL_SHIELD_DURABILITY = BUILDER.comment("Durability of Ender Pearl Shield. Default Durability is 187")
+                .define("enderPearlShieldDurability", 187);
 
 
         BUILDER.pop();
