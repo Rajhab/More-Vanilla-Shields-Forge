@@ -25,11 +25,11 @@ public class morevanillashields
     public static final String MOD_ID = "morevanillashields";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public morevanillashields(FMLJavaModLoadingContext context)
+    public morevanillashields()
     {
-        context.registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER ,ShieldConfig.SPEC, "morevanillashields-server.toml");
         MinecraftForge.EVENT_BUS.register(this);
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         ModItems.register(modEventBus);
         ModRecipeSerializer.register(modEventBus);
@@ -58,7 +58,8 @@ public class morevanillashields
             addAfter(pOutput, ModItems.OBSIDIAN_SHIELD.get(), ModItems.MAGMA_SHIELD.get());
             addAfter(pOutput, ModItems.MAGMA_SHIELD.get(), ModItems.COAL_SHIELD.get());
             addAfter(pOutput, ModItems.COAL_SHIELD.get(), ModItems.END_CRYSTAL_SHIELD.get());
-            addAfter(pOutput, ModItems.END_CRYSTAL_SHIELD.get(), ModItems.GLASS_SHIELD.get());
+            addAfter(pOutput, ModItems.END_CRYSTAL_SHIELD.get(), ModItems.ENDER_PEARL_SHIELD.get());
+            addAfter(pOutput, ModItems.ENDER_PEARL_SHIELD.get(), ModItems.GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.GLASS_SHIELD.get(), ModItems.TINTED_GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.TINTED_GLASS_SHIELD.get(), ModItems.BROWN_STAINED_GLASS_SHIELD.get());
             addAfter(pOutput, ModItems.BROWN_STAINED_GLASS_SHIELD.get(), ModItems.BLUE_STAINED_GLASS_SHIELD.get());

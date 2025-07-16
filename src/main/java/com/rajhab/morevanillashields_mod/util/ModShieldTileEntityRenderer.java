@@ -73,6 +73,8 @@ public class ModShieldTileEntityRenderer extends BlockEntityWithoutLevelRenderer
             rendermaterial = flag ? ModModelPredicateProvider.LOCATION_COAL_SHIELD_BASE : ModModelPredicateProvider.LOCATION_COAL_SHIELD_BASE_NOPATTERN;
         } else if (shield == ModItems.END_CRYSTAL_SHIELD.get()) {
             rendermaterial = flag ? ModModelPredicateProvider.LOCATION_END_CRYSTAL_SHIELD_BASE : ModModelPredicateProvider.LOCATION_END_CRYSTAL_SHIELD_BASE_NOPATTERN;
+        } else if (shield == ModItems.ENDER_PEARL_SHIELD.get()) {
+            rendermaterial = flag ? ModModelPredicateProvider.LOCATION_ENDER_PEARL_SHIELD_BASE : ModModelPredicateProvider.LOCATION_ENDER_PEARL_SHIELD_BASE_NOPATTERN;
         }
         VertexConsumer ivertexbuilder = rendermaterial.sprite().wrap(ItemRenderer.getFoilBufferDirect(buffer, shieldModel.renderType(rendermaterial.atlasLocation()), true, stack.hasFoil()));
         this.shieldModel.handle().render(matrixStack, ivertexbuilder, combinedLight, combinedOverlay, 1.0F, 1.0F, 1.0F, 1.0F);
